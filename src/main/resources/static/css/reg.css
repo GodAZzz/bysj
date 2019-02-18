@@ -1,0 +1,32 @@
+*{margin: 0;padding: 0;box-sizing: border-box;font-size: 16px;}
+a{text-decoration: none;color: #000;}
+/*logo*/
+.logo{max-width: 1000px;margin: 0 auto;}
+.logo img{height: 90px;}
+
+section{height: 600px;background: url(../img/reg.jpg)  no-repeat bottom;background-size: cover;}
+
+.main{max-width: 1100px;margin: 0 auto;position: relative;height: 470px;}
+.login-box{padding: 30px;background-color: rgba(0,0,0,.2);max-width: 360px;position: absolute;right: 0;top: 10%;}
+
+form h1{text-align: center;font-weight: 500;font-size: 24px;margin-bottom: 10px;color: #5a8962;}
+form div{position: relative;}
+/*input*/
+input,button{border: 0;outline: 0;}
+input{height: 40px;margin:10px 0;width: 300px;padding-left: 36px;}
+#code{width:200px;}
+.get-code{background-color: #ddd;display: block;width: 75px;height: 36px;line-height: 36px;float: right;text-align: center;margin-top:12px;border-radius: 5px;font-size: 14px;}
+/*检查框*/
+.check-uname{display: none;}
+.check-upwd{display: none;}
+/*label*/
+label:before{font-size: 24px;line-height: 40px;}
+label{position: absolute;background-color: #fff;color: #999;display: block;line-height: 50px;width: 30px;height: 40px;text-align: right;top:10px;}
+/*button*/
+form>div:nth-of-type(3){text-align: center;}
+button{display:block;width: 130px;height: 35px;margin:0 auto;color: #fff;background-color: #095f8a;cursor: pointer;margin-top: 20px;}
+
+/*底部*/
+footer{text-align: center;margin-top: 20px;}
+footer a{margin: 10px;}
+footer a:hover{color: #999;}

@@ -1,0 +1,30 @@
+*{margin: 0;padding: 0;box-sizing: border-box;font-size: 16px;}
+a{text-decoration: none;color: #000;}
+/*logo*/
+.logo{max-width: 1000px;margin: 0 auto;}
+.logo img{height: 90px;}
+
+section{height: 470px;background: url(../img/login.jpg)  no-repeat bottom;background-size: cover;}
+
+.main{max-width: 1100px;margin: 0 auto;position: relative;height: 470px;}
+.login-box{padding: 30px;background-color: rgba(0,0,0,.1);max-width: 360px;position: absolute;right: 0;top: 15%;}
+
+form h1{text-align: center;font-weight: 500;font-size: 24px;margin-bottom: 20px;color: #5a8962;}
+form>div:nth-of-type(1),form>div:nth-of-type(2){position: relative;}
+/*input*/
+input,button{border: 0;outline: 0;}
+#uname,#upwd{height: 40px;margin-bottom: 30px;width: 300px;border-radius: 30px;padding-left: 36px;}
+/*label*/
+.la-uname:before,.la-upwd:before{font-size: 24px;line-height: 40px;}
+.la-uname,.la-upwd{position: absolute;background-color: #fff;border-radius: 30px 0 0 30px;color: #999;display: block;line-height: 50px;width: 30px;height: 40px;text-align: right;}
+/*button*/
+form>div:nth-of-type(3){text-align: center;}
+button{display:block;width: 130px;height: 35px;border-radius: 20px;margin:0 auto;color: #fff;background-color: #095f8a;cursor: pointer;margin-top: 20px;}
+/*忘记密码*/
+.forget{float: right;color: #000;text-decoration: none;}
+.forget:hover{color: #095f8a;}
+/*底部*/
+
+footer{text-align: center;margin-top: 20px;}
+footer a{margin: 10px;}
+footer a:hover{color: #999;}
