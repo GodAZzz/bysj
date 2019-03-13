@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>体质测试</title>
+    <script src="lib/jquery/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/phy_base.css">
+
+    <style>
+    section{height: 920px;}
+    section>div:not(:first-child){display: none;}
+    </style>
+</head>
+<body>
+    <!--头部-->
+<iframe src="header.html" frameborder="0" width="100%" scrolling="no"></iframe>
+
+<div id="main">
+    <ul class="breadcrumb">
+        <li>当前位置：</li>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">中医</a></li>
+        <li ><a href="#">体质测试</a></li>
+    </ul>
+
+    <ul class="tab">
+        <li><a href="javascript:;">平和质</a></li>
+        <li><a href="javascript:;">平和质</a></li>
+        <li><a href="javascript:;">平和质</a></li>
+        <li><a href="javascript:;">平和质</a></li>
+        <li><a href="javascript:;">平和质</a></li>
+        <li><a href="javascript:;">平和质</a></li>
+        <li><a href="javascript:;">平和质</a></li>
+        <li><a href="javascript:;">平和质</a></li>
+        <li><a href="javascript:;">平和质</a></li>
+    </ul>
+<section>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+</section>
+
+</div>
+
+<script>
+$(".tab li").click(function(){
+    var index=$(this).index();
+    $(this).parent().next().find("div").eq(index).show().siblings().hide()
+})
+</script>
+
+<!--底部-->
+<iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;" style="margin-top:20px;"></iframe>
+</body>
+</html>

@@ -5,6 +5,9 @@ body{background-color: #fff3e6;}
 h1,h2,h3,h4,h5,h6{color: #5a8962;margin: 0;font-size: 17px;}
 a{color: #000;text-decoration: none;}
 a:hover{color: #777777;text-decoration: none;}
+/*logo*/
+.logo img{width: 290px;height: 160px;}
+
 /*登录注册*/
 .top{width:100%;height: 25px;background-color: #fff;}
 .top-l,.top-r{line-height: 25px;}
@@ -12,7 +15,7 @@ a:hover{color: #777777;text-decoration: none;}
 .top-r{float: right;}
 .top-r a{padding: 0 10px;}
 /*nav*/
-.my-nav{padding-left: 0;padding-right: 0;}
+.my-nav{padding-left: 0;padding-right: 0;background: url(../img/nav.png) no-repeat center left;background-size: 20px; }
 
 /*轮播*/
 #demo{box-shadow: 8px 10px 15px -5px rgba(0,0,0,.2);}
@@ -35,7 +38,9 @@ a:hover{color: #777777;text-decoration: none;}
 .picScroll ul{ overflow:hidden; zoom:1; }
 .picScroll li{ width:151px; margin: 15px 25px 10px 0; position:relative; float:left; display:inline; }
 .picList img  {display:block;background:#ddd;width:150px;}
-.picScroll li p {height:15px;margin-top:5px;color:#999;line-height:15px;overflow:hidden;}
+.picScroll li>p:nth-of-type(1){text-align: center;margin-bottom:10px;}
+.picScroll li>p:nth-of-type(1) a:hover{color:#f19100; }
+.picScroll li p {margin-top:5px;color:#999;line-height:15px;overflow:hidden;margin-bottom: 0;white-space:nowrap;text-overflow:ellipsis;overflow: hidden;}
 .picScroll li .txt1 a{color:#333;}
 .picScroll li .movielist_tt {position:relative;height:16px;line-height:16px;padding-right:30px;overflow:hidden;position:relative;}
 .picScroll li .movielist_tt a {font-size:14px;}
@@ -45,32 +50,38 @@ a:hover{color: #777777;text-decoration: none;}
 .tool-h{padding-left: 45px;background: url(../img/main.png) no-repeat left -430px;line-height: 36px;}
 .tool-b{background: #fff;border-radius: 10px;}
 .tool-b table td a{font-size: 16px; }
-
+.tool table tr td{background: url(../img/star.png) no-repeat 35% 50%;background-size: 40px;}
 /*体质养生*/
 .more{display:block;height: 30px;width: 60px;background: #5a8962;line-height: 30px;text-align: center;margin-top: 20px;border-radius: 5px;color: #fff;}
 .more:hover{color: #000;}
 .heath li a{font-size: 13px;}
 .heath{margin: 0;}
 .heath li a:hover{color: #f19100;}
-
-.heath>div:first-child h3{background: url(../img/main.png) no-repeat left -391px; padding-left: 45px;height: 36px;}
 .heath div{border-radius: 5px;height: 330px;overflow: hidden;}
-.heath>div:hover{border-radius: 10px;box-shadow:5px 5px 25px 5px rgba(0,0,0,.1);transform: translateY(-5px)}
-.heath>div:first-child{background-color: #F8F7F7; }
+.heath>div:hover{border-radius: 10px;box-shadow:5px 5px 25px 5px rgba(0,0,0,.1);transform: translateY(-5px);transition: all .2s linear;}
 .heath ul li{ background-color: #F8F7F7;border-bottom:1px dashed;padding: 10px;white-space:nowrap;text-overflow:ellipsis;overflow: hidden; }
+.heath ul li{background: url(../img/xtubiao/sflower.png) no-repeat left center;background-size: 25px;padding-left: 20px}
+
+
+.heath>div:first-child h3{background: url(../img/main.png) no-repeat left -856px; padding-left: 45px;height: 36px;}
+.heath>div:first-child{background-color: #F8F7F7; }
 
 /*体质测试*/
 .heath>div:nth-child(2) h3{background: url(../img/main.png) no-repeat left -785px; padding-left: 45px;height: 36px;}
 .heath>div:nth-child(2){background-color: #F8F7F7; margin: 0 5px 0 5px;}
 .heath>div:nth-child(2) p{height: 194px;text-overflow:ellipsis;overflow: hidden;}
 .heath>div:nth-child(2)>a{width: 100px;margin: 0 auto;}
-/*养生问答*/
+/*养生专题*/
 .heath div:nth-child(3) h3{background: url(../img/main.png) no-repeat left -462px; padding-left: 45px;height: 36px;}
 .heath div:nth-child(3){background-color:#F8F7F7;}
 heath>div:nth-child(3){background-color: #F8F7F7; }
-.heath>div:nth-child(3) ul li{ background-color: #F8F7F7;border-bottom:1px dashed;padding: 10px;white-space:nowrap;text-overflow:ellipsis;overflow: hidden; }
+.heath>div:nth-child(3) ul li{ background-color: #F8F7F7;border-bottom:1px dashed;padding: 10px;white-space:nowrap;text-overflow:ellipsis;overflow: hidden;padding-left: 20px; }
 
-
+/*中医*/
+.tradition>div:nth-child(2){background-color:#F8F7F7; }
+.tradition h3{background: url(../img/main.png) no-repeat left -391px; padding-left: 45px;height: 36px;}
+.tradition h3 a{color: #5a8962;font-size: 17px;}
+.tradition li{border: 0;background: url(../img/xtubiao/sflower.png) no-repeat left center;background-size: 25px;padding-left: 20px;font-size: 16px;}
 /*底部*/
 footer{border-top: 1px dashed #dddddd;}
 footer a{margin: 10px;}

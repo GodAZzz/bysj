@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>食物库</title>
+    <style>
+        ul>li{list-style-type: none;padding: 10px 0 10px 30px;background: url(./img/xtubiao/food.png) no-repeat  left center;background-size: 30px 30px;}
+        a{text-decoration: none;color: #000}
+        a:hover{color: #777;}
+
+    #main{width: 1100px;margin: 0 auto;margin-top: 30px;}
+
+     section:nth-of-type(1){background: #F8F7F7;}   
+    .list{float: right;width:600px;margin-top: 30px;}
+    .list ul:nth-of-type(1){float: left;}
+    .list ul:nth-of-type(2){float: right;}
+    .content{width: 300px;margin: 0 auto;}
+    .content::after{content: "";display: table;clear: both;}
+
+
+    .more{float: right;color: royalblue;margin-right: 100px;}
+    .more a{color: skyblue;}
+    .more a:hover{color: royalblue}
+
+    section:nth-of-type(2){margin: 30px 0;}
+    section:nth-of-type(2)::after{content: "";display: table;clear: both;}
+    section:nth-of-type(2) img{margin-right: 50px;}
+    .info{float: left;margin: 100px 0 0 50px;}
+
+    
+    </style>
+</head>
+<body>
+    <!--头部-->
+<iframe src="header.html" frameborder="0" width="100%" scrolling="no"></iframe>
+
+<div id="main">
+    <section>
+      <img src="img/wheat.jpg" width="450px" height="300px" >
+      <div class="list">
+          <div class="title">养生食物分类 <div class="more"><a href="javascript:;">More>></a></div></div>
+         <div class="content">
+          <ul>
+              <li><a href="javascript:;">五谷</a></li>
+              <li><a href="javascript:;">蔬菜</a></li>
+              <li><a href="javascript:;">水产</a></li>
+              <li><a href="javascript:;">肉类</a></li>
+          </ul>
+
+          <ul>
+                <li><a href="javascript:;">蛋类</a></li>
+                <li><a href="javascript:;">果品</a></li>
+                <li><a href="javascript:;">药食</a></li>
+             
+            </ul>
+        </div>
+      </div> 
+    </section>
+
+    <section>
+        <div class="info">
+<strong>体质适宜食物</strong>
+<p>平和质  气虚质  阳虚质  阴虚质  湿热质  痰湿质  气郁质  血瘀质  特禀质</p>
+<strong>食物功效</strong>
+<p>滋补 助消化 止痒 止血 延年益寿 消炎 消渴 乌发</p>
+<strong>应季食物</strong>
+<p>春夏秋冬</p>
+        </div>
+        <img src="./img/root.png" style="float:right">
+
+
+    </section>
+
+</div>
+
+<!--底部-->
+<iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;"> </iframe>
+</body>
+</html>

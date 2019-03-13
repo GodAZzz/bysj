@@ -2,9 +2,9 @@
 a{text-decoration: none;color: #000;}
 /*logo*/
 .logo{max-width: 1000px;margin: 0 auto;}
-.logo img{height: 90px;}
+.logo img{height: 110px;width: 200px;}
 
-section{height: 470px;background: url(../img/login.jpg)  no-repeat bottom;background-size: cover;}
+section{height: 470px;background: url(../img/login.jpg)  no-repeat bottom;background-size: cover;box-shadow: 5px 10px 50px #888888;}
 
 .main{max-width: 1100px;margin: 0 auto;position: relative;height: 470px;}
 .login-box{padding: 30px;background-color: rgba(0,0,0,.1);max-width: 360px;position: absolute;right: 0;top: 15%;}
@@ -24,7 +24,9 @@ button{display:block;width: 130px;height: 35px;border-radius: 20px;margin:0 auto
 .forget{float: right;color: #000;text-decoration: none;}
 .forget:hover{color: #095f8a;}
 /*底部*/
-
-footer{text-align: center;margin-top: 20px;}
+footer{margin-top: 30px;}
 footer a{margin: 10px;}
 footer a:hover{color: #999;}
+footer p:nth-of-type(1) span{color:#ddd;}
+footer p:nth-of-type(2){margin-top: 5px;border-top: 1px solid #dddddd;padding-top: 5px;}
+footer p:nth-of-type(2) span{padding-left: 10px;}

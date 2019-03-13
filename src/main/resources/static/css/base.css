@@ -1,0 +1,16 @@
+*{margin: 0;padding: 0;font-size: 13px;box-sizing: border-box;font-family:Arial,Helvetica Neue,Helvetica,PingFang SC,Tahoma;}
+a{color: #000;text-decoration: none;}
+a:hover{color: #777777;text-decoration: none;}
+/*body{background-color: #fff3e6;}*/
+/*logo*/
+.logo img{width: 230px;height: 145px;}
+/*nav*/
+.my-nav{padding-left: 0;padding-right: 0;background: url(../img/nav.png) no-repeat center left;background-size: 20px; }
+
+/*底部*/
+footer{margin-top: 20px;}
+footer a{margin: 10px;}
+footer a:hover{color: #999;}
+footer p:nth-of-type(1) span{color:#ddd;}
+footer p:nth-of-type(2){margin-top: 5px;border-top: 1px solid #dddddd;padding-top: 5px;}
+footer p:nth-of-type(2) span{padding-left: 10px;}
