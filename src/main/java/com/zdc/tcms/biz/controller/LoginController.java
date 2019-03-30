@@ -20,6 +20,10 @@ public class LoginController {
     @Autowired
     UserService userService;
 
+    /**
+     * 用户登陆界面
+     * @return
+     */
     @RequestMapping(value = "/userLogin")
     public ModelAndView userLogin(){
         ModelAndView mv = new ModelAndView();
@@ -27,6 +31,13 @@ public class LoginController {
         return mv;
     }
 
+    /**
+     * 用户登陆
+     * @param uname
+     * @param upwd
+     * @param session
+     * @return
+     */
     @RequestMapping(value = "/user/login", method = RequestMethod.POST)
     public ModelAndView login(@RequestParam("uname") String uname, @RequestParam("upwd") String upwd,
                               HttpSession session){

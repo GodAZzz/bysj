@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>测试结果</title>
-    <link rel="stylesheet" href="css/phy_base.css">
+    <link rel="stylesheet" th:href="@{/css/phy_base.css}">
 
     <style>
         .clear {clear: both;}
@@ -23,7 +23,8 @@
 
 <body>
     <!--头部-->
-    <iframe src="header.html" frameborder="0" width="100%" scrolling="no"></iframe>
+    <!--<iframe src="header.html" frameborder="0" width="100%" scrolling="no"></iframe>-->
+    <div th:include="header::header" ></div>
 
     <div id="main">
         <ul class="breadcrumb">
@@ -46,7 +47,7 @@
             </div>
             
             <div class="clear">
-                <img src="img/xtubiao/leaf.png" width="50px" height="50px">
+                <img th:src="@{/img/xtubiao/leaf.png}" width="50px" height="50px">
                 <span>阳虚质养生方案</span>
             </div>
             <br>
@@ -66,7 +67,7 @@
                     <br> （2）肩胛骨酸痛，夜间更痛，遇寒痛加剧伴有后头疼；骨质疏松；
                     <br> （3）痹症（腰部酸痛、酸麻或痛连骶、股；关节疼痛；容易水肿；痛经、月经推后；性欲低下，
                     <br> &nbsp;&nbsp;性冷淡；上热下寒，【上热是假象，下寒是真象】；容易有色斑。
-                </div class="first">
+                </div >
                 <div class="first">
                     美容四大问：问月经、问大便、问睡眠、问情绪。
                 </div>
@@ -87,7 +88,8 @@
 
 
     <!--底部-->
-    <iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;"> </iframe>
+    <!--<iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;"> </iframe>-->
+    <div th:include="footer::footer"></div>
 </body>
 
 </html>

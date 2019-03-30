@@ -5,19 +5,19 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * 中医
+ * 食物库
  */
 @RestController
-public class Tranditional {
+public class FoodLibController {
 
     /**
-     * 跳转到中医界面
+     * 跳转到食物库界面
      * @return
      */
-    @RequestMapping(value = "/jumpToTranditional")
-    public ModelAndView jumpToTranditional(){
+    @RequestMapping(value = "/toFoodLib")
+    public ModelAndView toFoodLib(){
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("traditional");
+        mv.setViewName("foodLib");
         return mv;
     }
 }

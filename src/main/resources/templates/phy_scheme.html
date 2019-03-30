@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>体质养生方案</title>
-    <link rel="stylesheet" href="css/phy_base.css">
-	  <script src="lib/jquery/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" th:href="@{/css/phy_base.css}">
+	  <script th:src="@{lib/jquery/jquery-3.3.1.min.js}"></script>
     <style>
         section {height: 920px;}
 
@@ -23,7 +23,8 @@
 
 <body>
     <!--头部-->
-    <iframe src="header.html" frameborder="0" width="100%" scrolling="no"></iframe>
+    <!--<iframe src="header.html" frameborder="0" width="100%" scrolling="no"></iframe>-->
+    <div th:include="header::header" ></div>
     <div id="main">
         <ul class="breadcrumb">
             <li>当前位置：</li>
@@ -70,7 +71,7 @@
 
         <section>
             <div class="clear">
-                <img src="img/xtubiao/leaf.png">
+                <img th:src="@{/img/xtubiao/leaf.png}">
                 <span>阳虚质养生方案</span>
                 <p class="first">
                     表现：背部怕冷，腹部怕冷，手冷过肘，脚冷过膝，脸色发白。【背部膀胱抵御外邪入侵，丹田（脐
@@ -105,7 +106,7 @@
         </div>
 		
 		<div class="clear">
-                <img src="img/xtubiao/leaf.png">
+                <img th:src="@{/img/xtubiao/leaf.png}">
                 <span>阴虚质养生方案</span>
                 <p class="first">
                     表现：背部怕冷，腹部怕冷，手冷过肘，脚冷过膝，脸色发白。【背部膀胱抵御外邪入侵，丹田（脐
@@ -151,7 +152,8 @@ $(".tab li").click(function(){
 
 
         <!--底部-->
-        <iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;"> </iframe>
+        <!--<iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;"> </iframe>-->
+        <div th:include="footer::footer"></div>
 </body>
 
 </html>

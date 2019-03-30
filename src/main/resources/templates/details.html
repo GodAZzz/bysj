@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/phy_base.css">
-    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/phy_base.css}">
+    <title>膳食</title>
 </head>
 
 <body>
     <!--头部-->
-    <iframe src="header.html" frameborder="0" width="100%" scrolling="no"></iframe>
+    <!--<iframe src="header.html" frameborder="0" width="100%" scrolling="no"></iframe>-->
+    <div th:include="header::header" ></div>
 
     <div id="main">
         <ul class="breadcrumb">
@@ -35,7 +36,8 @@
 
 
     <!--底部-->
-    <iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;"> </iframe>
+    <!--<iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;"> </iframe>-->
+    <div th:include="footer::footer"></div>
 </body>
 
 </html>

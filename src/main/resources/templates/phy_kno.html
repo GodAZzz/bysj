@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>体质知识</title>
-    <link rel="stylesheet" href="css/phy_base.css">
+    <link rel="stylesheet" th:href="@{/css/phy_base.css}">
 
 <style>
     #main{width: 800px;height: 1020px;margin: 0 auto;}
@@ -19,8 +19,8 @@
 </head>
 <body>
 <!--头部-->
-<iframe src="header.html" frameborder="0" width="100%" scrolling="no"></iframe>
-
+<!--<iframe src="header.html" frameborder="0" width="100%" scrolling="no"></iframe>-->
+<div th:include="header::header" ></div>
 <!--主体-->
 <div id="main">
 <ul class="breadcrumb">
@@ -83,6 +83,7 @@
 </section>
 </div>
 <!--底部-->
-<iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;"> </iframe>
+<!--<iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;"> </iframe>-->
+<div th:include="footer::footer"></div>
 </body>
 </html>

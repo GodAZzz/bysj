@@ -10,4 +10,16 @@
     <select id="getUserByLogin" resultType="com.zdc.tcms.biz.entity.User" parameterType="java.util.Map">
         select * from user where username=#{username} and password=#{password}
     </select>
+
+    <select id="checkAccountExit" resultType="com.zdc.tcms.biz.entity.User" parameterType="java.util.Map">
+        select * from user where username=#{username}
+    </select>
+
+    <select id="phoneCheckExit" resultType="com.zdc.tcms.biz.entity.User" parameterType="java.util.Map">
+        select * from user where phone=#{phone}
+    </select>
+    
+    <insert id="insertUser" parameterType="com.zdc.tcms.biz.entity.User" >
+      INSERT into user(userid,username,password,phone,createtime,status) VALUES (#{userid},#{username},#{password},#{phone},#{createtime},#{status})
+    </insert>
 </mapper>

@@ -10,6 +10,10 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class IndexController {
 
+    /**
+     * 跳转到首页
+     * @return
+     */
     @RequestMapping(value = "/index")
     public ModelAndView index(){
         ModelAndView mv = new ModelAndView();

@@ -1,5 +1,10 @@
 package com.zdc.tcms.biz.entity;
 
+import java.util.Date;
+
+/**
+ * 用户实体类
+ */
 public class User {
 
     private Long userid;
@@ -9,6 +14,10 @@ public class User {
     private String password;
 
     private String phone;
+
+    private Date createtime;
+
+    private Integer status;
 
     public Long getUserid() {
         return userid;
@@ -42,6 +51,22 @@ public class User {
         this.phone = phone;
     }
 
+    public Date getCreatetime() {
+        return createtime;
+    }
+
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -49,6 +74,8 @@ public class User {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", phone='" + phone + '\'' +
+                ", createtime=" + createtime +
+                ", status=" + status +
                 '}';
     }
 }

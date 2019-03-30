@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,12 +34,13 @@
 </head>
 <body>
     <!--头部-->
-<iframe src="header.html" frameborder="0" width="100%" scrolling="no"></iframe>
+<!--<iframe src="header.html" frameborder="0" width="100%" scrolling="no"></iframe>-->
+    <div th:include="header::header" ></div>
 
 <section>
         <div class="tradition">                  
                 <div> 
-                    <img src="img/medicine.jpg" width="450px" height="300px">                    
+                    <img th:src="@{/img/medicine.jpg}" width="450px" height="300px">
                     <div> 
                         <p>体质类型</p>
                             <ul class="list-unstyled list-group">
@@ -71,7 +72,7 @@
 </div>
 
 <div class="info">
-<img src="img/medicine_2.jpg" width="500px" height="350px">
+<img th:src="@{/img/medicine_2.jpg}" width="500px" height="350px">
 <div>
     <p style="padding:5px 0 25px 10px;"><strong>体质：</strong>人们生命过程中，在先天禀赋和后天获得的基础上，逐渐形成的形态结构、生理功能、物质代谢和性格心理方面综合的固有的一些特质。</p>
     <hr style="color:rgba(0,0,0,.3);width: 300px;margin: 0 auto;">
@@ -100,7 +101,8 @@
 
 
 <!--底部-->
-<iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;"> </iframe>
+<!--<iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;"> </iframe>-->
+    <div th:include="footer::footer"></div>
 </body>
 </body>
 </html>

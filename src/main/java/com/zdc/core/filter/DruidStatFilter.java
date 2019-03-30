@@ -1,12 +1,15 @@
-/*
 
-package com.zdc.core.filter;
+
+/*package com.zdc.core.filter;
 
 import com.alibaba.druid.support.http.WebStatFilter;
 
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebInitParam;
 
+*//**
+ * druid拦截器
+ *//*
 @WebFilter(
         filterName="druidWebStatFilter",
         urlPatterns= {"/*"},
@@ -15,6 +18,6 @@ import javax.servlet.annotation.WebInitParam;
         }
 )
 public class DruidStatFilter extends WebStatFilter {
-}
+}*/
 
-*/
+

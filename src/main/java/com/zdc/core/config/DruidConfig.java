@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * druid数据源配置
  * 获取配置文件里的配置信息
  */
 @Configuration

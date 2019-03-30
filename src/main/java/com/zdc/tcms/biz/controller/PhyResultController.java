@@ -5,19 +5,18 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * 中医
+ * 测试结果
  */
 @RestController
-public class Tranditional {
+public class PhyResultController {
 
     /**
-     * 跳转到中医界面
-     * @return
+     * 跳转到测试结果界面
      */
-    @RequestMapping(value = "/jumpToTranditional")
-    public ModelAndView jumpToTranditional(){
+    @RequestMapping(value = "/toPhyResult")
+    public ModelAndView toPhyResult(){
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("traditional");
+        mv.setViewName("phy_result");
         return mv;
     }
 }

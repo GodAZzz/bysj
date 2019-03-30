@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,11 +34,12 @@
 </head>
 <body>
     <!--头部-->
-<iframe src="header.html" frameborder="0" width="100%" scrolling="no"></iframe>
+<!--<iframe src="header.html" frameborder="0" width="100%" scrolling="no"></iframe>-->
+    <div th:include="header::header" ></div>
 
 <div id="main">
     <section>
-      <img src="img/wheat.jpg" width="450px" height="300px" >
+      <img th:src="@{/img/wheat.jpg}" width="450px" height="300px" >
       <div class="list">
           <div class="title">养生食物分类 <div class="more"><a href="javascript:;">More>></a></div></div>
          <div class="content">
@@ -68,7 +69,7 @@
 <strong>应季食物</strong>
 <p>春夏秋冬</p>
         </div>
-        <img src="./img/root.png" style="float:right">
+        <img th:src="@{/img/root.png}" style="float:right">
 
 
     </section>
@@ -76,6 +77,7 @@
 </div>
 
 <!--底部-->
-<iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;"> </iframe>
+<!--<iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;"> </iframe>-->
+<div th:include="footer::footer"></div>
 </body>
 </html>

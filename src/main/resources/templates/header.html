@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="css/head_foot.css">
+    <link rel="stylesheet" th:href="@{/lib/bootstrap/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/head_foot.css}">
 
 </head>
 <body>
-<div class="container">
+<div class="container" th:fragment="header">
     <header class="row align-items-md-end pl-3 pr-3">
         <!--log-->
-        <div class="logo col-md-4 col-sm-12 "><img src="img/index_logo.png "></div>
+        <div class="logo col-md-4 col-sm-12 "><img th:src="@{/img/index_logo.png} "></div>
         <!--导航栏-->
         <nav class=" col-md-8  col-sm-12 h-25 mb-1  my-nav">
             <ul class="nav pl-3 ">

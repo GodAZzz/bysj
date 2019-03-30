@@ -5,19 +5,18 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * 中医
+ *体质测试
  */
 @RestController
-public class Tranditional {
+public class PhyTestController {
 
     /**
-     * 跳转到中医界面
-     * @return
+     * 跳转到体质测试界面
      */
-    @RequestMapping(value = "/jumpToTranditional")
-    public ModelAndView jumpToTranditional(){
+    @RequestMapping(value = "/toPhyTest")
+    public ModelAndView toPhyTest(){
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("traditional");
+        mv.setViewName("phy_test");
         return mv;
     }
 }

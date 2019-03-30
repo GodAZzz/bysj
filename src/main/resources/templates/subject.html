@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>专题</title>
     <style>
         a {text-decoration: none;color: #000}
 
@@ -34,11 +34,12 @@
 
 <body>
     <!--头部-->
-    <iframe src="header.html" frameborder="0" width="100%" scrolling="no"></iframe>
+    <!--<iframe src="header.html" frameborder="0" width="100%" scrolling="no"></iframe>-->
+    <div th:include="header::header" ></div>
 
     <div id="main">
         <div class="top">
-          <img src="img/winter.jpeg" width="450px" height="300px">
+          <img th:src="@{/img/winter.jpeg}" width="450px" height="300px">
         <div class="top_R">
             <p>冬季养生吃什么！</p>
             <p>冬季滋补讲方法&nbsp;&nbsp;健康美食两不误</p>
@@ -97,7 +98,8 @@
 
 
     <!--底部-->
-    <iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;"> </iframe>
+    <!--<iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;"> </iframe>-->
+    <div th:include="footer::footer"></div>
 </body>
 
 </html>

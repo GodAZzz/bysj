@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>体质测试</title>
-    <script src="lib/jquery/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="css/phy_base.css">
+    <script th:src="@{/lib/jquery/jquery-3.3.1.min.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/phy_base.css}">
 
     <style>
     section{height: 920px;}
@@ -15,7 +15,8 @@
 </head>
 <body>
     <!--头部-->
-<iframe src="header.html" frameborder="0" width="100%" scrolling="no"></iframe>
+<!--<iframe src="header.html" frameborder="0" width="100%" scrolling="no"></iframe>-->
+    <div th:include="header::header" ></div>
 
 <div id="main">
     <ul class="breadcrumb">
@@ -58,6 +59,7 @@ $(".tab li").click(function(){
 </script>
 
 <!--底部-->
-<iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;" style="margin-top:20px;"></iframe>
+<!--<iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;" style="margin-top:20px;"></iframe>-->
+    <div th:include="footer::footer"></div>
 </body>
 </html>

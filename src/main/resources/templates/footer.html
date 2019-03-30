@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="css/head_foot.css">
+    <link rel="stylesheet" th:href="@{/lib/bootstrap/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/head_foot.css}">
     <style>
         /*html{background-color: #fff3e6;}*/
     </style>
 </head>
 <body>
 <!--底部-->
-<footer>
+<div th:fragment="footer">
     <div>
         <p><a href="#">关于我们</a><span>|</span><a href="#">联系我们</a><span>|</span><a href="#">友情链接</a></p>
         <p>Copyright&copy;2018-2020 www.zysl.com <span>版权所有 中医食疗网站</span></p>
     </div>
-</footer>
+</div>
 </body>
 </html>
