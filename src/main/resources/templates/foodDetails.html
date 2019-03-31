@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/css/phy_base.css}">
+     <!-- <link rel="stylesheet" href="../static/css/phy_base.css"> -->
+    <title>菜谱详情</title>
+    <style>
+    .clear:after{content: "";display: table;clear: both;}
+    .food{margin-top: 20px;}
+    .food img{float: left;width:290px;height: 195px;}
+    .intro{float: right;width: 400px;height: 195px;background-color: #faf1e0;padding: 16px;}
+    .title{background-color: #f8c286;width:100px;margin-bottom: 10px;border-radius: 5px;text-align: center;line-height: 30px;}
+    .content{line-height: 25px;}
+
+
+    .step{background-color: #f8c286;margin-top: 25px;padding: 0 30px;border-top: 1px solid #fff;}
+    .ingre p:first-child,.step p:first-child,.notic p:first-child{background-color: #6b3906;border-radius: 5px;width: 100px;margin:15px 0;text-align: center;}
+    .step p:nth-child(2),.notic p:nth-child(2){line-height: 30px;}
+
+</style>
+</head>
+
+<body>
+    <!--头部-->
+    <!--<iframe src="header.html" frameborder="0" width="100%" scrolling="no"></iframe>-->
+    <div th:include="header::header" ></div>
+
+    <div id="main">
+        <ul class="breadcrumb clear">
+            <li>当前位置：</li>
+            <li>
+                <a href="#">首页</a>
+            </li>
+            <li>
+                <a href="#">膳食</a>
+            </li>
+            <li>
+                <a href="#">菜谱详情</a>
+            </li>
+        </ul>
+<div class="food clear">
+    <!-- <img src="../static/img/index_food/f1.jpg"> -->
+    <img th:src="@{/img/index_food/f1.jpg}"></img>
+    <div class="intro">
+        <p class="title">鱼头豆腐煲</p>
+        <p class="content">在深秋时，老年人警惕血管疾病，吃些豆腐，跟鱼头做汤，营养高，含钙量也高，对于身体的帮助很大，非常适合全家人食用哦。大豆蛋白属于完全蛋白质，其氨基酸组成比较好，人体所必需的氨基酸它几乎都有。</p>
+    </div>
+</div>
+<div class="step">
+<div class="ingre">
+<p>所需食材</p>
+<p>鱼头1个、豆腐100g、油适量、盐适量、姜胡椒粉</p>
+</div>
+<div class="method">
+<p>制作方法</p>
+<p>步骤1.准备好鱼头 鱼尾
+　　步骤2.豆腐切成小块。
+　　步骤3.将鱼头清洗干净。
+　　步骤4.锅中注入少量的油，煸香姜片，下入鱼头 鱼尾煸至变色。
+　 步骤5. 倒入冷水，烧开撇去血沫。
+　　步骤6. 加入豆腐，继续烧开。
+　　步骤7. 大火煮至汤色奶白。
+　　步骤8.加入盐 胡椒调味即可</p>
+</div>
+<div class="notic">
+    <p>食用须知</p>
+    <p>1.大豆的蛋白质生物学价值可与鱼肉相媲美，是植物蛋白中的佼佼者。大豆蛋白属于完全蛋白质，其氨基酸组成比较好，人体所必需的氨基酸它几乎都有。
+
+　　2.制作豆腐的大豆中含有18%左右的油脂，大部分能转移到豆腐中去。大豆油中的亚油酸比例较大，且不含胆固醇，有益于人体神经、血管、大脑的生长发育。</p>
+</div>
+</div>
+
+
+    </div>
+
+
+
+    <!--底部-->
+    <!--<iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;"> </iframe>-->
+    <div th:include="footer::footer"></div>
+</body>
+
+</html>

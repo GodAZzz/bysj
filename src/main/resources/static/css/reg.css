@@ -15,13 +15,9 @@ form div{position: relative;}
 input,button{border: 0;outline: 0;}
 input{height: 40px;margin:10px 0;width: 300px;padding-left: 36px;}
 #code{width:200px;}
-.get-code{background-color: #ddd;display: block;width: 75px;height: 36px;line-height: 36px;float: right;text-align: center;margin-top:12px;border-radius: 5px;font-size: 14px;}
+#getcode{background-color: #ddd;display: block;width: 75px;height: 36px;line-height: 36px;float: right;text-align: center;margin-top:12px;border-radius: 5px;font-size: 14px;padding-left: 0;}
 /*检查框*/
-.check-info{display: none;}
-.check_success,.check_fail{background-repeat:no-repeat;background-position:left center;display:block;}
-.check_success{background-image:url("../img/ok.png");padding-left:20px;width:0px;height:20px;overflow:hidden;
-}
-.check_fail{background-image:url("../img/err.png");width:0px;height:20px;overflow:hidden;padding-left:20px;}
+
 
 /*label*/
 label:before{font-size: 24px;line-height: 40px;}

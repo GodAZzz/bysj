@@ -8,11 +8,16 @@
     <title>注册</title>
     <link rel="stylesheet" th:href="@{/css/font-awesome/css/font-awesome.min.css}"></link>
     <link rel="stylesheet" th:href="@{/css/reg.css}"></link>
+	<script src="@{/lib/jquery/jquery.min.js}"></script>
+    <!--  <link rel="stylesheet" href="../static/css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/reg.css"> -->
+    
 
 </head>
 <body>
 <header>
     <div class="logo"><img th:src="@{/img/index_logo.png}"></img></div>
+    <!-- <div class="logo"><img src="../static/img/index_logo.png"></div> -->
 </header>
 <section>
     <div class="main">
@@ -23,43 +28,40 @@
                 <div>
                     <label for="uname" class=" fa fa-user"></label>
                     <input type="text" name="username" id="uname" placeholder="请输入账号"></input>
-                    <div class=" check-info">*用户名长度3-10位，以字母、数字或下划线组成，不能以数字开头</div>
+                   
                     <span id="errorAccount"
-                          style="color:red;padding-left:3px;position: absolute;top: 3px;"></span>
+                          style="color:red;padding-left:3px;position: absolute;top: 49px;"></span>
                 </div>
                 <!--密码-->
                 <div>
                     <label for="upwd" class=" fa fa-lock"></label>
                     <input type="password" name="userpwd" id="upwd" placeholder="设置密码"></input>
-                    <div class="check-info">*密码不得低于6位</div>
+                    
                     <span id="errorLoginPassword"
-                          style="color:red;padding-left:3px;position: absolute;top: 3px;"></span>
+                          style="color:red;padding-left:3px;position: absolute;top: 49px;"></span>
                 </div>
                 <!--确认密码-->
                 <div>
                     <label for="rupwd" class=" fa fa-lock"></label>
                     <input type="password" name="ruserpwd" id="rupwd" placeholder="确认密码"></input>
-                    <div class="check-info">*确认密码输入错误</div>
+                    
                     <span id="errorReloginPwd"
-                          style="color:red;padding-left:3px;position: absolute;top: 3px;"></span>
+                          style="color:red;padding-left:3px;position: absolute;top: 49px;"></span>
                 </div>
 
                 <!--手机号-->
                 <div>
                     <label for="phone" class=" fa fa-mobile"></label>
                     <input type="tel" name="phone" id="phone" placeholder="请输入手机号"></input>
-                    <div class="check-info">*手机号格式错误</div>
-                    <span id="errorPhone"
-                          style="color:red;padding-left:3px;position: absolute;top: 3px;"></span>
+                    
+                    <span id="errorPhone" style="color:red;padding-left:3px;position: absolute;top: 49px;"></span>
                 </div>
                 <!--验证码-->
                 <div>
                     <label for="code" class=" fa fa-code-fork"></label>
                     <input type="text" name="code" id="code" placeholder="请输入验证码"></input>
-                    <input type="button" class="btn btn-warning btn-xs"
-                           style="width: 8.2%;font-size:15px;height:4.5%" id="getcode" value=" 获取验证码">
-                    <span id="errorYzm"
-                          style="color:red;padding-left:3px;position: absolute;top: 3px;"></span>
+                    <input type="button" id="getcode" value=" 获取验证码">
+                    <span id="errorYzm" style="color:red;padding-left:3px;position: absolute;top: 3px;"></span>
                 </div>
 
 
@@ -94,6 +96,7 @@
         }else if(patrn.test(uname)){
             $("#errorAccount").html("账号不能为纯数字！");
         }else{
+        	 $("#errorAccount").html("");
             $.ajax({
                 url : '/register/checkAccountExit',
                 type : 'post',
@@ -143,6 +146,7 @@
         }else if(!(patrn.test(phone))){
             $("#errorPhone").html("手机号码有误，请重填！");
         }else{
+        	$("#errorPhone").html("");
             $.ajax({
                 url : '/register/phoneCheck',
                 type : 'post',
