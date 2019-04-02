@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" th:src="@{/css/foodList.css}">
+    <script th:src="@{/lib/jquery/jquery1.42.min.js}"></script>
+    <script th:src="@{/js/jquery.SuperSlide.2.1.1.js}"></script>
+</head>
+
+<body>
+    <style type="text/css">
+    a{text-decoration: none;}
+   .top a{color:gold;position: absolute;top: 69%;left: 17%;;width: 80px;background: rgba(0, 0, 0, .1);border-bottom-right-radius: 17px;border-bottom-left-radius: 15px;}
+   #main {width: 800px;height: 1100px;margin: 0 auto;}
+   #main .scrollBox{margin:100px auto;}
+    .top{border: 1px solid #ddd;position: relative;margin-top: 200px;}
+    .avatarOut{height: 100px;width: 120px;position: absolute;left: 50%;bottom: 50%;margin-left: -50px;margin-bottom: -50px;background: #fff;text-align: center;}
+
+    .info{border: 1px solid #ddd;margin-top: 100px;height: 200px;}
+    .info>p:first-child{ padding-left: 32px; background: url(./img/xtubiao/sflower.png)  left center no-repeat;background-size: 40px 40px;}
+    .content{display: flex;flex-wrap: wrap;width: 500px;margin-left: 30px;}
+    .content p:first-child{margin-right: 300px;}
+    .recom,.updata{display: block;float: left;width: 85px;height: 25px;text-align: center;line-height: 25px;background:#db934e;color: #000;border-radius: 5px; }
+    .recom{margin-right: 30px;}
+    
+    </style>
+</body>
+<div id="main">
+    <!-- 头像 -->
+    <div class="top">
+        <div class="avatarOut">
+        <img class="avatar" style="width: 100px;height: 100px;border-radius: 50%;"  th:src="@{/img/person/person.jpg}">
+        <a href="#">修改头像</a>
+    </div>
+        </div>
+        <!-- 信息 -->
+    <div class="info">
+<p>基本资料</p>
+<div class="content">
+    <p>昵称：<span>XXX</span></p>
+    <p>性别：<span>XXX</span></p>
+    <p>体质类型：<span>湿热质</span></p>
+</div>
+<div style="margin:0 auto;width: 200px;">
+<a href="#" class="recom">查看推荐</a>
+<a href="#" class="updata">修改信息</a>
+</div>
+    </div>
+
+    <!-- 收藏 -->
+    <div class="scrollBox">
+            <div class="ohbox">
+                <ul class="piclist">
+                    <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}" style="width:185px;height:140px;"/><span>益于血管修复鱼头豆腐煲</span></a></li>
+                    <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}" style="width:185px;height:140px;"/><span>益于血管修复鱼头豆腐煲</span></a></li>
+                    <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}" style="width:185px;height:140px;"/><span>益于血管修复鱼头豆腐煲</span></a></li>
+                    <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}" style="width:185px;height:140px;"/><span>益于血管修复鱼头豆腐煲</span></a></li>
+                    <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}" style="width:185px;height:140px;"/><span>益于血管修复鱼头豆腐煲</span></a></li>
+                    <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}" style="width:185px;height:140px;"/><span>益于血管修复鱼头豆腐煲</span></a></li>
+                    <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}" style="width:185px;height:140px;"/><span>益于血管修复鱼头豆腐煲</span></a></li>
+                    <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}" style="width:185px;height:140px;"/><span>益于血管修复鱼头豆腐煲</span></a></li>
+                    <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}" style="width:185px;height:140px;"/><span>益于血管修复鱼头豆腐煲</span></a></li>
+                </ul>
+            </div>
+            <div class="pageBtn">
+                <span class="prev">&lt;</span>
+                <span class="next">&gt;</span>
+                <ul class="list">
+                    <li>0</li>
+                    <li>1</li>
+                    <li>2</li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript">
+        jQuery(".scrollBox").slide({ titCell: ".list li", mainCell: ".piclist", effect: "left", vis: 3, scroll: 3, delayTime: 800, trigger: "click", easing: "easeOutCirc" });
+        </script>
+    
+   
+    
+</div>
+
+</html>
