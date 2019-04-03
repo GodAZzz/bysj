@@ -5,18 +5,18 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * 膳食
+ * 忘记密码
  */
 @RestController
-public class DetailsController {
+public class ForgetPwdController {
 
     /**
-     * 跳转到膳食界面
+     * 跳转到忘记密码界面
      */
-    @RequestMapping(value = "/toDetails")
-    public ModelAndView toDetails(){
+    @RequestMapping(value = "/toForgetPwd")
+    public ModelAndView toForgetPwd(){
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("details");
+        mv.setViewName("forgetPwd");
         return mv;
     }
 }

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -61,5 +62,20 @@ public class LoginController {
             mv.setViewName("login");
             return mv;
         }
+    }
+
+    /**
+     * 注销用户
+     */
+    @RequestMapping(value = "/logout")
+    public ModelAndView logout(HttpServletRequest request){
+        ModelAndView mv = new ModelAndView();
+        //获取当前session
+        HttpSession session = request.getSession();
+        if(session != null){
+            session.invalidate();
+            mv.setViewName("login");
+        }
+        return mv;
     }
 }

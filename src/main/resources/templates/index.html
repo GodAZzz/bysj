@@ -20,7 +20,10 @@
         <span class="top-l">欢迎<span th:text="${session.loginUser}"></span>来到中医食疗网！</span>
         <sapn class="top-r">
             <!--<a href="#">登录</a>-->
-            <a href="#">注销</a>
+            <!--<a href="#">注销</a>-->
+            <a th:if="${session.loginUser} == null" th:href="@{/userLogin}">登陆</a>
+            <a th:if="${session.loginUser} == null" th:href="@{/register}">注册</a>
+            <a th:if="${session.loginUser} != null" th:href="@{/logout}">注销</a>
         </sapn>
     </div>
 </div>
@@ -33,7 +36,7 @@
         <nav class=" col-lg-6  col-sm-12 h-25 mb-1 border-top border-bottom my-nav ">
             <ul class="nav pl-3">
                 <li class="nav-item"><a href="#" class="nav-link">首页</a></li>
-                <li class="nav-item"><a th:href="@{/toDetails}" class="nav-link">膳食</a></li>
+                <li class="nav-item"><a th:href="@{/toFoodDetails}" class="nav-link">膳食</a></li>
                 <li class="nav-item"><a th:href="@{/jumpToTranditional}" class="nav-link">中医</a></li>
                 <li class="nav-item"><a th:href="@{/toPhyScheme}" class="nav-link">体质</a></li>
                 <li class="nav-item"><a th:href="@{/toSubject}" class="nav-link">专题</a></li>
@@ -198,7 +201,7 @@
         </div>
 
         <div class="col-sm-12 pt-5 col-md-6 ">
-            <h3 class="pt-3 mb-3"><a href="javascript:;">中医</a></h3>
+            <h3 class="pt-3 mb-3"><a href="javascript:;">中医九种体质</a></h3>
             <div class="row">
                 <div class="float-left col-4">
                     <ul class="list-unstyled list-group">
