@@ -3,20 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <title>忘记密码</title>
+  <link rel="stylesheet" th:href="@{/lib/bootstrap/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/head_foot.css}">
 </head>
 <style>
   body{background: #ddd;}
 .top{border:2px solid #07793e;}
 .main{margin-top:100px; }
-.content{height: 300px;width: 800px;background: #fff;border-radius: 10px;margin: 0 auto;}
+.content{height: 360px;width: 800px;background: #fff;border-radius: 10px;margin: 0 auto;}
 
 form{width: 300px;height:200px;margin: 50px auto;}
 form div{margin-top: 20px;}
+form>div:nth-child(4){width:360px;}
 form input{border: none;border: 2px solid #07793e; border-radius: 2px;outline: none;height: 20px;}
 form button{font-size: 16px; cursor: pointer; border: none;outline: none;background: #07793e;border-radius: 5px;width: 100px;height: 30px;margin-left: 110px; margin-top: 45px;}
+
+.getcode{display:block;width: 80px;height: 25px;border-radius: 5px;text-decoration: none;color: #000;background-color: #ddd;float: right;font-size: 14px;text-align: center;line-height: 25px;}
 </style>
 <body>
 <div class="top"></div>
+<!--  头部 -->
+  <div th:include="header::header" ></div>
+<!-- 主内容 -->
 <div class="main">
   <div class="content">
     <table></table>
@@ -24,9 +32,13 @@ form button{font-size: 16px; cursor: pointer; border: none;outline: none;backgro
   <div><label for="uname">用&nbsp;&nbsp;&nbsp;&nbsp;户&nbsp;&nbsp;&nbsp;名：</label> <input type="text" id="uname"></div>
   <div><label for="upwd">输入新密码：</label> <input type="password" id="upwd"></div>
   <div><label for="rpwd">确认新密码：</label> <input type="password" id="rpwd"></div>
+  <div><label for="phone">手&nbsp;&nbsp;&nbsp;&nbsp;机&nbsp;&nbsp;&nbsp;号：</label> <input type="text" id="phone"><a href="javascript:;" class="getcode">获取验证码</a></div>
+  <div><label for="code">输入验证码：</label> <input type="text" id="code"></div>
   <button>重置密码</button>
 </form>
   </div>
 </div>
+<!-- 底部 -->
+ <div th:include="footer::footer"></div>
 </body>
 </html>
