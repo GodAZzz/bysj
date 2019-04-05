@@ -22,4 +22,8 @@
     <insert id="insertUser" parameterType="com.zdc.tcms.biz.entity.User" >
       INSERT into user(userid,username,password,phone,createtime,status) VALUES (#{userid},#{username},#{password},#{phone},#{createtime},#{status})
     </insert>
+    
+    <update id="updatePictureUrl" parameterType="java.util.Map">
+        UPDATE user SET pictureaddress=#{pictureaddress} WHERE username=#{username}
+    </update>
 </mapper>

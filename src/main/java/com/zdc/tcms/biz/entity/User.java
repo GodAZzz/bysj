@@ -19,6 +19,8 @@ public class User {
 
     private Integer status;
 
+    private String pictureaddress;
+
     public Long getUserid() {
         return userid;
     }
@@ -67,6 +69,14 @@ public class User {
         this.status = status;
     }
 
+    public String getPictureaddress() {
+        return pictureaddress;
+    }
+
+    public void setPictureaddress(String pictureaddress) {
+        this.pictureaddress = pictureaddress;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -76,6 +86,7 @@ public class User {
                 ", phone='" + phone + '\'' +
                 ", createtime=" + createtime +
                 ", status=" + status +
+                ", pictureaddress='" + pictureaddress + '\'' +
                 '}';
     }
 }

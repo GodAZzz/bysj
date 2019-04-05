@@ -64,5 +64,12 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    @Override
+    public String getPictureAddress(String username) {
+        User user = userMapper.checkAccountExit(username);
+        String pictureaddress = user.getPictureaddress();
+        return pictureaddress;
+    }
+
 
 }

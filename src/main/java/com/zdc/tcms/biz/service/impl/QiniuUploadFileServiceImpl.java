@@ -6,13 +6,16 @@ import com.qiniu.storage.BucketManager;
 import com.qiniu.storage.UploadManager;
 import com.qiniu.util.Auth;
 import com.qiniu.util.StringMap;
+import com.zdc.tcms.biz.mapper.UserMapper;
 import com.zdc.tcms.biz.service.IQiniuUploadFileService;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 
 @Service
@@ -29,6 +32,11 @@ public class QiniuUploadFileServiceImpl implements IQiniuUploadFileService, Init
 
     @Value("${qiniu.Bucket}")
     private String bucket;
+
+    @Autowired
+    private UserMapper userMapper;
+
+
 
     /**
      *定义七牛云上传的相关策略
@@ -88,4 +96,42 @@ public class QiniuUploadFileServiceImpl implements IQiniuUploadFileService, Init
     private String getUploadToken(){
         return this.auth.uploadToken(bucket, null, 3600, putPolicy);
     }
+
+    /**
+     * 得到图片url
+     */
+    @Override
+    public String getPictureUrl(MultipartFile file){
+        String result = null;
+        String fileName = file.getOriginalFilename();
+        //自定义的文件名称
+        String trueFileName = String.valueOf(System.currentTimeMillis())+fileName;
+        try {
+            InputStream inputStream = file.getInputStream();
+            Response response = uploadFile(inputStream, trueFileName);
+            if(response != null){
+                //测试域名
+                String csdn = "http://ppfqedo90.bkt.clouddn.com/";
+                result = csdn + trueFileName;
+            }else {
+                result = "error";
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    @Override
+    public String updatePictureUrl(String url, String username) {
+        int i = userMapper.updatePictureUrl(url, username);
+        if(i > 0){
+            return "success";
+        }else {
+            return "error";
+        }
+    }
+
+
+
 }

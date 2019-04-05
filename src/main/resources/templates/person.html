@@ -39,15 +39,11 @@
     <div class="top">
       <div class="avatarOut">
           <form action="/upload" method="post" enctype="multipart/form-data">
-          <input type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*" name="file">
-
-          <img class="avatar" style="width: 100px;height: 100px;border-radius: 50%;"  th:src="@{/img/person/person.jpg}">
+          <input id="file" type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*" name="file">
+              <img class="avatar" style="width: 100px;height: 100px;border-radius: 50%;" th:if="${pictureAddress} == null"  th:src="@{/img/person/person.jpg}">
+              <img class="avatar" style="width: 100px;height: 100px;border-radius: 50%;" th:if="${pictureAddress} != null"  th:src="${pictureAddress}">
              <a href="javascript:;">修改头像</a>
           </form>
-        <!--<form action="/upload" method="post" enctype="multipart/form-data">-->
-            <!--<input type="file" name="file" >-->
-            <!--<button type="submit">修改头像</button>-->
-        <!--</form>-->
     </div>
     </div>
     <!-- 信息 -->
@@ -105,8 +101,28 @@
     /**
      * 上传图片
      */
-    $("input[type = 'file']").change(function () {
-        
+    $("input[type = 'file']").change(function () {//input框的内容改变就ajax上传
+        var formData = new FormData();
+        formData.append("file", document.getElementById("file").files[0]);
+        $.ajax({
+            type : "post",
+            contentType : false,
+            processData : false,
+            url : "/upload",
+            data : formData,
+            async : true,
+            success : function (data) {
+                if ("error" == data) {
+                    alert("上传失败");
+                }else if("empty" == data){
+                    alert("请先登录");
+                    window.location.href = "/userLogin";
+                }else {
+                    alert("上传成功");
+                    window.location.href = "/toPerson";
+                }
+            }
+        });
     });
 </script>
 </html>
