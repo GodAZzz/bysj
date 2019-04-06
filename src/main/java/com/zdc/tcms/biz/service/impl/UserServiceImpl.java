@@ -71,5 +71,15 @@ public class UserServiceImpl implements UserService {
         return pictureaddress;
     }
 
+    @Override
+    public boolean isUpdatePwd(String upwd, String uname) {
+        int i = userMapper.updatePwd(upwd, uname);
+        if(i>0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 
 }

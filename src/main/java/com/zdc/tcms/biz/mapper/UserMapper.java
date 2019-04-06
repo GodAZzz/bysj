@@ -25,4 +25,6 @@ public interface UserMapper {
     User phoneCheckExit(@Param("phone") String phone);
 
     int updatePictureUrl(@Param("pictureaddress") String pictureaddress, @Param("username") String username);
+
+    int updatePwd(@Param("password") String password, @Param("username") String username);
 }

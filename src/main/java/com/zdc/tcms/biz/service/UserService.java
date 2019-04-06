@@ -13,4 +13,6 @@ public interface UserService {
     boolean insertUser(String username, String userpwd, String phone);
 
     String getPictureAddress(String username);
+
+    boolean isUpdatePwd(String upwd, String uname);
 }

@@ -46,7 +46,7 @@ public class RegisterController {
      */
     @RequestMapping(value = "/user/register", method = RequestMethod.POST)
     public String userRegister(@RequestParam("username") String username, @RequestParam("userpwd") String userpwd,
-                                     @RequestParam("ruserpwd") String ruserpwd, @RequestParam("phone")String phone,
+                                     @RequestParam("phone")String phone,
                                      @RequestParam("code") String code, HttpSession session){
         String result = "";
         if(session.getAttribute("yzm") == null){
@@ -116,5 +116,27 @@ public class RegisterController {
             e.printStackTrace();
             return "error";
         }
+    }
+
+    /**
+     * 重置密码
+     */
+    @RequestMapping(value = "/forgetPwd", method = RequestMethod.POST)
+    public String forgetPwd(@RequestParam("uname") String uname, @RequestParam("upwd") String upwd,
+                            @RequestParam("code") String code, HttpSession session){
+        String result = "";
+        if(session.getAttribute("yzm") == null){
+            result = "error";
+            return result;
+        }
+        if(session.getAttribute("yzm").toString().equals(code)){
+            boolean updatePwd = userService.isUpdatePwd(upwd, uname);
+            if(updatePwd == true){
+                result = "success";
+            }else {
+                result = "error";
+            }
+        }
+        return result;
     }
 }
