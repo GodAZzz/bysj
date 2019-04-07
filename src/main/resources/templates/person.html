@@ -7,17 +7,27 @@
     <link rel="stylesheet" th:href="@{/css/foodList.css}">
     <link rel="stylesheet" th:href="@{/lib/bootstrap/css/bootstrap.css}">
     <link rel="stylesheet" th:href="@{/css/head_foot.css}">
+
+	
+ <!--    <link rel="stylesheet" href="../static/lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/head_foot.css">
+    <link rel="stylesheet" href="../static/css/foodList.css"> -->
+
     <script th:src="@{/lib/jquery/jquery1.42.min.js}"></script>
     <script th:src="@{/js/jquery.SuperSlide.2.1.1.js}"></script>
+
+
+  <!--   <script src="../static/lib/jquery/jquery1.42.min.js"></script>
+    <script src="../static/js/jquery.SuperSlide.2.1.1.js"></script> -->
 
 </head>
 
 <body>
     <style type="text/css">
     a{text-decoration: none;}
-   .top a{color:gold;position: absolute;top: 69%;left: 17%;;width: 80px;background: rgba(0, 0, 0, .1);border-bottom-right-radius: 17px;border-bottom-left-radius: 15px;}
-   #main {width: 800px;margin: 0 auto;}
-   #main .scrollBox{margin:50px auto;}
+    .top a{color:gold;position: absolute;top: 69%;left: 17%;;width: 80px;background: rgba(0, 0, 0, .1);border-bottom-right-radius: 17px;border-bottom-left-radius: 15px;}
+   	#main {width: 800px;margin: 0 auto;position: relative;}
+   	#main .scrollBox{margin:50px auto;}
     .top{border: 1px solid #ddd;position: relative;margin-top: 85px;}
     .avatarOut{height: 100px;width: 120px;position: absolute;left: 50%;bottom: 50%;margin-left: -50px;margin-bottom: -50px;background: #fff;text-align: center;}
     .inputPic{ cursor:pointer;opacity:0;ilter:alpha(opacity=0);width:100%;height:100%;position: absolute;top: 0;left: 0;z-index: 9;}
@@ -29,19 +39,43 @@
     .recom,.updata{display: block;float: left;width: 85px;height: 25px;text-align: center;line-height: 25px;background:#db934e;color: #000;border-radius: 5px; }
     .recom{margin-right: 30px;}
     
+    /*修改信息弹出框*/
+    .card{z-index: 9;}
+    .card form{width: 200px;height:200px;margin: 50px auto;}
+	.card form div{margin-top: 20px;}
+	.card form input{border: none;border: 2px solid #07793e; border-radius: 2px;outline: none;height: 20px;}
+	.card form button{font-size: 16px; cursor: pointer; border: none;outline: none;background: #07793e;border-radius: 5px;width: 100px;height: 30px;margin-left: 63px; margin-top: 16px;}
+	.card .closer{font-size:20px;font-weight: bold;opacity: .5;cursor: pointer;text-align: right;margin-right:10px;}
+    .card .closer:hover{opacity: 1;}
+    .fade{position: absolute;width: 500px;height: 290px;top: 0;left: 50%;margin-top: -145px;margin-left: -250px;opacity: 0;transition: all .5s linear;}
+    .in{position: absolute;width: 500px;height: 290px;top: 50%;left: 50%;margin-top: -145px;margin-left: -250px;opacity: 1;transition: all .5s linear;}
+
     </style>
 </body>
 <!--头部-->
 <div th:include="header::header" ></div>
+
 <!--主内容-->
 <div id="main">
+	<!-- 修改信息框 -->
+<div class="card fade">
+	<div class="closer">×</div>
+	<form>
+	<div><label for="uname">昵称：</label><input type="text" name="uname" id="uname"></div>
+	<div><label for="sex">性别：</label>
+		<input type="radio" name="sex" id="upwd">男
+		<input type="radio" name="sex" id="upwd">女
+	</div>
+	<button>修改</button>
+	</form>
+</div>
     <!-- 头像 -->
     <div class="top">
       <div class="avatarOut">
           <form action="/upload" method="post" enctype="multipart/form-data">
-          <input id="file" type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*" name="file">
-              <img class="avatar" style="width: 100px;height: 100px;border-radius: 50%;" th:if="${pictureAddress} == null"  th:src="@{/img/person/person.jpg}">
-              <img class="avatar" style="width: 100px;height: 100px;border-radius: 50%;" th:if="${pictureAddress} != null"  th:src="${pictureAddress}">
+          <input type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*" name="file">
+
+          <img class="avatar" style="width: 100px;height: 100px;border-radius: 50%;"  th:src="@{/img/person/person.jpg}">
              <a href="javascript:;">修改头像</a>
           </form>
     </div>
@@ -101,28 +135,15 @@
     /**
      * 上传图片
      */
-    $("input[type = 'file']").change(function () {//input框的内容改变就ajax上传
-        var formData = new FormData();
-        formData.append("file", document.getElementById("file").files[0]);
-        $.ajax({
-            type : "post",
-            contentType : false,
-            processData : false,
-            url : "/upload",
-            data : formData,
-            async : true,
-            success : function (data) {
-                if ("error" == data) {
-                    alert("上传失败");
-                }else if("empty" == data){
-                    alert("请先登录");
-                    window.location.href = "/userLogin";
-                }else {
-                    alert("上传成功");
-                    window.location.href = "/toPerson";
-                }
-            }
-        });
+    $("input[type = 'file']").change(function () {
+        
     });
+
+    $(".updata").click(function(){
+				$(".card").addClass("in").children(".closer").click(function(){
+					$(".card").removeClass("in")
+				});
+
+			})
 </script>
 </html>
