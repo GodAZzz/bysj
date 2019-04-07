@@ -10,10 +10,85 @@
     <link rel="stylesheet" th:href="@{/lib/bootstrap/css/bootstrap.css}">
     <link rel="stylesheet" th:href="@{/css/head_foot.css}">
 
+    <!-- <script src="../static/lib/jquery/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="../static/css/phy_base.css"> -->
+
     <style>
-    section{height: 920px;}
-    section>div:not(:first-child){display: none;}
-    </style>
+    
+.py_test{
+	background:url(../static/img/test_bg.jpg) no-repeat left top;
+    background-size: contain;
+    height: 600px;
+    margin-top: 20px;
+}
+.start{
+    width: 200px;
+    margin: 100px auto;
+}
+.start img{
+     width: 200px;
+     height: 220px;
+
+}
+.start img:hover{
+    transform: translate(0px,10px);
+    transition: transform .1s linear;
+    box-shadow: 0 0 40px 10px rgba(0,0,0,.1);
+}
+.fade{
+    display: none;
+    transition: all .5s linear;
+}
+
+.chose{
+    margin-top: 114px;
+    text-align: center;
+}
+.chose ul{
+    width: 400px;
+    margin: 0 auto;
+}
+.chose li{
+    list-style: none;
+    border:1px solid #a1a1a1;
+    background:#e8e8e8;
+    border-radius: 4px;
+    color: #4c4c4c;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2), inset 0 0 6px 0 rgba(255,255,255,0.3), 0 1px 2px rgba(0,0,0,0.4);
+    margin:12px 0;
+    cursor: pointer;
+    color: #4c4c4c;
+}
+/*上一题 下一题*/
+.navigator{
+    text-align: center;
+}
+.pre,.next{
+float: left;
+}
+.pre a ,.next a {
+    display: block;
+    width: 80px;
+    height: 30px;
+    text-decoration: none;
+    color: #6C6C6C;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+    border-radius: 4px;
+    line-height: 30px;
+}
+.pre{
+    background:#6fb2e5;
+    box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
+    margin:20px 315px 0 150px;
+}
+.next{
+ background:#77d125;
+    box-shadow: 0 1px 5px #3caa00, inset 0 10px 20px #c9ffb6;
+    margin-top: 20px;
+}
+
+ </style>
+
 </head>
 <body>
     <!--头部-->
@@ -21,47 +96,43 @@
     <div th:include="header::header" ></div>
 
 <div id="main">
-    <ul class="breadcrumb">
+    <ul class="breadcrumb clear">
         <li>当前位置：</li>
         <li><a href="#">首页</a></li>
         <li><a href="#">中医</a></li>
         <li ><a href="#">体质测试</a></li>
     </ul>
+<!-- 测试题主内容 -->
+  <div class="py_test">
+    <table></table>
+    <!-- 开始 -->
+<div class="start "><img src="../static/img/start.png" alt=""></div>
+<!-- 选择题 -->
+<div class='chose fade'>
+<p>请选择你的性别</p>
+<ul>
+    <li>男</li>
+    <li>女</li>
+</ul>
+<div class="navigator clear">
+<div class="pre"><a href="javascript:;"><上一题</a></div>
+<div class="next"><a href="javascript:;">下一题></a></div>
+</div>
+</div>
 
-    <ul class="tab">
-        <li><a href="javascript:;">平和质</a></li>
-        <li><a href="javascript:;">平和质</a></li>
-        <li><a href="javascript:;">平和质</a></li>
-        <li><a href="javascript:;">平和质</a></li>
-        <li><a href="javascript:;">平和质</a></li>
-        <li><a href="javascript:;">平和质</a></li>
-        <li><a href="javascript:;">平和质</a></li>
-        <li><a href="javascript:;">平和质</a></li>
-        <li><a href="javascript:;">平和质</a></li>
-    </ul>
-<section>
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-    <div>6</div>
-    <div>7</div>
-    <div>8</div>
-    <div>9</div>
-</section>
+  </div>
 
 </div>
 
 <script>
-$(".tab li").click(function(){
-    var index=$(this).index();
-    $(this).parent().next().find("div").eq(index).show().siblings().hide()
+$('.start').click(function () {
+    $(this).addClass('fade').next().removeClass('fade')
 })
 </script>
 
+
+
 <!--底部-->
-<!--<iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;" style="margin-top:20px;"></iframe>-->
     <div th:include="footer::footer"></div>
 </body>
 </html>

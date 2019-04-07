@@ -3,7 +3,7 @@ a{text-decoration: none;color: #000;}
 
 
 #main{width: 800px;height: 1020px;margin: 0 auto;}
-
+.clear:after{content: "";display: table;clear: both;}
 .breadcrumb li{float: left;list-style: none;padding: 0 5px 10px 5px; border-top: 1px solid #693a06;border-bottom: 1px solid #693a06;margin-bottom: 5px;padding-top: 8px;}
 .breadcrumb li a:hover{color: #d3d9df}
 .breadcrumb li+li:before{content: "/";font-weight: 700;padding-right: 5px;}
