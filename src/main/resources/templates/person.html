@@ -9,7 +9,7 @@
     <link rel="stylesheet" th:href="@{/css/head_foot.css}">
 
 	
- <!--    <link rel="stylesheet" href="../static/lib/bootstrap/css/bootstrap.css">
+   <!--  <link rel="stylesheet" href="../static/lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../static/css/head_foot.css">
     <link rel="stylesheet" href="../static/css/foodList.css"> -->
 
@@ -34,7 +34,7 @@
 
     .info{border: 1px solid #ddd;margin-top: 100px;height: 200px;}
     .info>p:first-child{ margin-top:10px;padding-left: 32px; background: url(./img/xtubiao/sflower.png)  left center no-repeat;background-size: 40px 40px;}
-    .content{display: flex;flex-wrap: wrap;width: 500px;margin: 40px 0 0 30px;}
+    .content{width: 500px;margin: 40px 0 0 30px;justify-content: center;}
     .content p:first-child{margin-right: 300px;}
     .recom,.updata{display: block;float: left;width: 85px;height: 25px;text-align: center;line-height: 25px;background:#db934e;color: #000;border-radius: 5px; }
     .recom{margin-right: 30px;}
@@ -47,10 +47,10 @@
 	.card form button{font-size: 16px; cursor: pointer; border: none;outline: none;background: #07793e;border-radius: 5px;width: 100px;height: 30px;margin-left: 63px; margin-top: 16px;}
 	.card .closer{font-size:20px;font-weight: bold;opacity: .5;cursor: pointer;text-align: right;margin-right:10px;}
     .card .closer:hover{opacity: 1;}
-    .fade{position: absolute;width: 500px;height: 290px;top: 0;left: 50%;margin-top: -145px;margin-left: -250px;opacity: 0;transition: all .5s linear;}
+    .fade{position: absolute;width: 500px;height: 0px;top: 0;left: 50%;margin-top: -145px;margin-left: -250px;opacity: 0;transition: all .5s linear;}
     .in{position: absolute;width: 500px;height: 290px;top: 50%;left: 50%;margin-top: -145px;margin-left: -250px;opacity: 1;transition: all .5s linear;}
-
     </style>
+
 </body>
 <!--头部-->
 <div th:include="header::header" ></div>
@@ -64,7 +64,7 @@
         <span id="errorAccount"
         style="color:red;padding-left:3px;"></span>
 	<div><label for="uname">昵称：</label><input type="text" name="uname" id="uname"></div>
-	<div><label for="sex">性别：</label>
+	<div>性别：
 		<input type="radio" name="sex" id="men" checked="checked" value="男">男
 		<input type="radio" name="sex" id="woman" value="女">女
 	</div>
@@ -86,11 +86,13 @@
     <div class="info">
         <p>基本资料</p>
         <div class="content">
+        	<div style="display: flex;">
             <p>昵称：<span th:text="${user.username}" id="nc"></span></p>
             <p>性别：<span th:text="${user.gender}"></span></p>
+            </div>
             <p>体质类型：<span th:text="${user.tzlx}"></span></p>
         </div>
-        <div style="margin:0 auto;width: 200px;">
+        <div style="margin:0 auto;width: 200px;" class="clear">
             <a href="#" class="recom">查看推荐</a>
             <a href="#" class="updata">修改信息</a>
         </div>
@@ -200,7 +202,7 @@
     $("#updateMess").click(function () {
         var uname = $("#uname").val();
         var gender = $('input[name="sex"]:checked').val();
-        var oldname = [[${user.username}]];
+        // var oldname = [[${user.username}]];
         if(uname == "") {
             $("#errorAccount").html("账号不能为空！");
         }else {

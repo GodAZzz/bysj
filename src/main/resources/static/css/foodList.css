@@ -87,3 +87,9 @@
     }
 
     .piclist span{color: #000;font-size: 14px;}
+
+    .clear:after{
+        content: "";
+        display: table;
+        clear: both;
+   }
