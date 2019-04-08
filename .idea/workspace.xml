@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cb72d6c-1700-4d5f-948b-f61581aace4e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zdc/tcms/biz/controller/PersonController.java" afterPath="$PROJECT_DIR$/src/main/java/com/zdc/tcms/biz/controller/PersonController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zdc/tcms/biz/entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/zdc/tcms/biz/entity/User.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zdc/tcms/biz/mapper/UserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/zdc/tcms/biz/mapper/UserMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zdc/tcms/biz/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/zdc/tcms/biz/service/UserService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zdc/tcms/biz/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/zdc/tcms/biz/service/impl/UserServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback-boot.xml" afterPath="$PROJECT_DIR$/src/main/resources/logback-boot.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/phy_base.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/phy_base.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/foodDetails.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/foodDetails.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/forgetPwd.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/forgetPwd.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/header.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/header.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/person.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/person.html" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/phy_test.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/phy_test.html" />
-      <change beforePath="$PROJECT_DIR$/target/bysj-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/bysj-1.0-SNAPSHOT.jar" />
-      <change beforePath="$PROJECT_DIR$/target/bysj-1.0-SNAPSHOT.jar.original" afterPath="$PROJECT_DIR$/target/bysj-1.0-SNAPSHOT.jar.original" />
-      <change beforePath="$PROJECT_DIR$/target/classes/logback-boot.xml" afterPath="$PROJECT_DIR$/target/classes/logback-boot.xml" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -44,63 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="person.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/person.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="202" column="43" lean-forward="false" selection-start-line="202" selection-start-column="43" selection-end-line="202" selection-end-column="43" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#form#0;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PhyTestController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zdc/tcms/biz/controller/PhyTestController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="15" column="39" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PersonController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zdc/tcms/biz/controller/PersonController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="45" column="54" lean-forward="false" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileUploadController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zdc/tcms/biz/controller/FileUploadController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="35" column="31" lean-forward="true" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zdc/tcms/biz/controller/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="49" column="47" lean-forward="false" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="phy_test.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="phy_test.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phy_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="127" column="16" lean-forward="true" selection-start-line="127" selection-start-column="16" selection-end-line="127" selection-end-column="16" />
+            <state relative-caret-position="154">
+              <caret line="115" column="6" lean-forward="false" selection-start-line="115" selection-start-column="6" selection-end-line="115" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -168,7 +95,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/header.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/foodDetails.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/phy_test.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/zdc/tcms/biz/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/forgetPwd.html" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserMapper.xml" />
@@ -178,6 +104,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zdc/tcms/biz/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zdc/tcms/biz/controller/PersonController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/person.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/phy_test.html" />
       </list>
     </option>
   </component>
@@ -567,12 +494,12 @@
       <workItem from="1553574231861" duration="2074000" />
       <workItem from="1553584873637" duration="3175000" />
       <workItem from="1553662420505" duration="104356000" />
-      <workItem from="1554547508911" duration="42406000" />
+      <workItem from="1554547508911" duration="42646000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="265764000" />
+    <option name="totallyTimeSpent" value="266004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -905,14 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phy_test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="127" column="16" lean-forward="true" selection-start-line="127" selection-start-column="16" selection-end-line="127" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-281">
@@ -1032,7 +951,15 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zdc/tcms/biz/controller/PhyTestController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="15" column="39" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="39" />
+          <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phy_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="115" column="6" lean-forward="false" selection-start-line="115" selection-start-column="6" selection-end-line="115" selection-end-column="6" />
           <folding />
         </state>
       </provider>
