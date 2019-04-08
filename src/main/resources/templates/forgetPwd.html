@@ -10,7 +10,7 @@
   body{background: #ddd;}
 .top{border:2px solid #07793e;}
 .main{margin-top:100px; }
-.content{height: 360px;width: 800px;background: #fff;border-radius: 10px;margin: 0 auto;}
+.content{height: 410px;width: 800px;background: #fff;border-radius: 10px;margin: 0 auto;}
 
 form{width: 300px;height:200px;margin: 50px auto;}
 form div{margin-top: 20px;}
@@ -32,21 +32,21 @@ form button{font-size: 16px; cursor: pointer; border: none;outline: none;backgro
   <div>
     <label for="uname">用&nbsp;&nbsp;&nbsp;&nbsp;户&nbsp;&nbsp;&nbsp;名：</label> <input type="text" id="uname" name="uname">
     <span id="errorAccount"
-          style="color:red;padding-left:3px;position: absolute;top: 49px;"></span>
+          style="color:red;padding-left:3px;"></span>
   </div>
   <div>
     <label for="upwd">输入新密码：</label> <input type="password" id="upwd" name="upwd">
     <span id="errorLoginPassword"
-          style="color:red;padding-left:3px;position: absolute;top: 49px;"></span>
+          style="color:red;padding-left:3px;"></span>
   </div>
   <div>
     <label for="rpwd">确认新密码：</label> <input type="password" id="rpwd" name="rpwd">
     <span id="errorReloginPwd"
-          style="color:red;padding-left:3px;position: absolute;top: 49px;"></span>
+          style="color:red;padding-left:3px;"></span>
   </div>
   <div>
     <label for="phone">手&nbsp;&nbsp;&nbsp;&nbsp;机&nbsp;&nbsp;&nbsp;号：</label> <input type="text" id="phone" name="phone"><!--<a href="javascript:;" class="getcode">获取验证码</a>--><input type="button" id="getcode" value="获取验证码" class="getcode"></div>
-  <span id="errorPhone" style="color:red;padding-left:3px;position: absolute;top: 49px;"></span>
+  <span id="errorPhone" style="color:red;padding-left:3px;"></span>
   <div>
     <label for="code">输入验证码：</label> <input type="text" id="code" name="code">
   </div>
@@ -118,6 +118,7 @@ form button{font-size: 16px; cursor: pointer; border: none;outline: none;backgro
         if(phone == ""){
             $("#errorPhone").html("电话不能为空！");
         }else {
+
             $.ajax({
                 url : '/register/phoneCheck',
                 type : 'post',

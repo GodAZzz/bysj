@@ -15,3 +15,6 @@ section:before{content:"";display:table;clear:both}
 .tab a{color:#2e7db5; }
 .tab  li a:hover{color: #0f386e; }
 .tab li{list-style: none;float: left;margin: 10px 20px;}
+
+.py_test{background: url('../img/test_bg.jpg') no-repeat left top;background-size: contain;height: 600px;margin-top: 20px;
+}

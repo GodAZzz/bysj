@@ -12,7 +12,11 @@ public interface UserService {
 
     boolean insertUser(String username, String userpwd, String phone);
 
-    String getPictureAddress(String username);
+    User getPictureAddress(String username);
 
     boolean isUpdatePwd(String upwd, String uname);
+
+    boolean isUpdateNameAndSex(String username, String gender, String oldname);
+
+    Long getUserid(String username);
 }

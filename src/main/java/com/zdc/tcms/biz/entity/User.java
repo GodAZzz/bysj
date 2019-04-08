@@ -21,6 +21,10 @@ public class User {
 
     private String pictureaddress;
 
+    private String gender;
+
+    private String tzlx;
+
     public Long getUserid() {
         return userid;
     }
@@ -77,6 +81,22 @@ public class User {
         this.pictureaddress = pictureaddress;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getTzlx() {
+        return tzlx;
+    }
+
+    public void setTzlx(String tzlx) {
+        this.tzlx = tzlx;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -87,6 +107,8 @@ public class User {
                 ", createtime=" + createtime +
                 ", status=" + status +
                 ", pictureaddress='" + pictureaddress + '\'' +
+                ", gender='" + gender + '\'' +
+                ", tzlx='" + tzlx + '\'' +
                 '}';
     }
 }

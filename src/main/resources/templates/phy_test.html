@@ -15,12 +15,7 @@
 
     <style>
     
-.py_test{
-	background:url(../static/img/test_bg.jpg) no-repeat left top;
-    background-size: contain;
-    height: 600px;
-    margin-top: 20px;
-}
+
 .start{
     width: 200px;
     margin: 100px auto;
@@ -106,7 +101,7 @@ float: left;
   <div class="py_test">
     <table></table>
     <!-- 开始 -->
-<div class="start "><img src="../static/img/start.png" alt=""></div>
+<div class="start "><img th:src="@{/img/start.png}" alt=""></div>
 <!-- 选择题 -->
 <div class='chose fade'>
 <p>请选择你的性别</p>
@@ -115,17 +110,35 @@ float: left;
     <li>女</li>
 </ul>
 <div class="navigator clear">
-<div class="pre"><a href="javascript:;"><上一题</a></div>
-<div class="next"><a href="javascript:;">下一题></a></div>
 </div>
 </div>
+
+      <!--<div >
+          <p>您容易头晕或站起时晕眩吗？</p>
+          <ul>
+              <li>没有(根本不)</li>
+              <li>很少(有一点)</li>
+              <li>有时(有些)</li>
+              <li>经常(相当)</li>
+              <li>总是(非常)</li>
+          </ul>
+          <div class="navigator clear">
+              <div class="pre"><a href="javascript:;">上一题</a></div>
+              <div class="next"><a href="javascript:;">下一题</a></div>
+          </div>
+      </div>-->
 
   </div>
 
 </div>
-
-<script>
-$('.start').click(function () {
+    <script th:src="@{/lib/jquery/jquery.min.js}" type="text/javascript"></script>
+    <script th:src="@{/lib/bootstrap/js/bootstrap.min.js}" type="text/javascript"></script>
+    <script th:src="@{/js/jquery.SuperSlide.2.1.1.js}" type="text/javascript"></script>
+    <script th:inline="javascript">
+        /**
+         * 点击开始图标
+         */
+        $('.start').click(function () {
     $(this).addClass('fade').next().removeClass('fade')
 })
 </script>

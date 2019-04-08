@@ -27,4 +27,7 @@ public interface UserMapper {
     int updatePictureUrl(@Param("pictureaddress") String pictureaddress, @Param("username") String username);
 
     int updatePwd(@Param("password") String password, @Param("username") String username);
+
+    int updateNameAndSex(@Param("username") String username, @Param("gender") String gender, @Param("oldname") String oldname);
+
 }

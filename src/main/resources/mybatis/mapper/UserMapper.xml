@@ -30,4 +30,9 @@
     <update id="updatePwd" parameterType="java.util.Map">
       UPDATE user SET password=#{password} WHERE username=#{username}
     </update>
+    
+    <update id="updateNameAndSex" parameterType="java.util.Map">
+      UPDATE user SET username=#{username},gender=#{gender} WHERE username=#{oldname}
+    </update>
+
 </mapper>

@@ -60,22 +60,24 @@
 	<!-- 修改信息框 -->
 <div class="card fade">
 	<div class="closer">×</div>
-	<form>
+	<form id="updateMessage">
+        <span id="errorAccount"
+        style="color:red;padding-left:3px;"></span>
 	<div><label for="uname">昵称：</label><input type="text" name="uname" id="uname"></div>
 	<div><label for="sex">性别：</label>
-		<input type="radio" name="sex" id="upwd">男
-		<input type="radio" name="sex" id="upwd">女
+		<input type="radio" name="sex" id="men" checked="checked" value="男">男
+		<input type="radio" name="sex" id="woman" value="女">女
 	</div>
-	<button>修改</button>
+	<button id="updateMess">修改</button>
 	</form>
 </div>
     <!-- 头像 -->
     <div class="top">
       <div class="avatarOut">
           <form action="/upload" method="post" enctype="multipart/form-data">
-          <input type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*" name="file">
+          <input type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*" name="file" id="file">
 
-          <img class="avatar" style="width: 100px;height: 100px;border-radius: 50%;"  th:src="@{/img/person/person.jpg}">
+          <img class="avatar" style="width: 100px;height: 100px;border-radius: 50%;"  th:src="${user.pictureaddress}">
              <a href="javascript:;">修改头像</a>
           </form>
     </div>
@@ -84,9 +86,9 @@
     <div class="info">
         <p>基本资料</p>
         <div class="content">
-            <p>昵称：<span>XXX</span></p>
-            <p>性别：<span>XXX</span></p>
-            <p>体质类型：<span>湿热质</span></p>
+            <p>昵称：<span th:text="${user.username}" id="nc"></span></p>
+            <p>性别：<span th:text="${user.gender}"></span></p>
+            <p>体质类型：<span th:text="${user.tzlx}"></span></p>
         </div>
         <div style="margin:0 auto;width: 200px;">
             <a href="#" class="recom">查看推荐</a>
@@ -135,8 +137,29 @@
     /**
      * 上传图片
      */
-    $("input[type = 'file']").change(function () {
-        
+    $("input[type = 'file']").change(function () {//input框的内容改变就ajax上传
+        var formData = new FormData();
+        formData.append("file",document.getElementById("file").files[0]);
+        $.ajax({
+            type : "POST",
+            contentType : false,
+            processData : false,
+            url : "/upload",
+            data : formData,
+            async : true,
+            success : function (data){
+                if("empty"==data){
+                    alert("请先登录");
+                    return;
+                }else if("error"==data){
+                    alert("上传失败");
+                    return;
+                }else {
+                    alert("上传成功");
+                    window.location.href = "/toPerson";
+                }
+            }
+        });
     });
 
     $(".updata").click(function(){
@@ -145,5 +168,60 @@
 				});
 
 			})
+
+    /**
+     * 验证昵称
+     */
+    $("#uname").blur(function () {
+        var uname = $("#uname").val();
+        if(uname == ""){
+            $("#errorAccount").html("账号不能为空！");
+        }else {
+            $.ajax({
+                url : '/register/checkAccountExit',
+                type : 'post',
+                data : {
+                    "username" : uname
+                },
+                success : function (data) {
+                    if(data == "账号已存在"){
+                        $("#errorAccount").html("该昵称已被使用");
+                    }else {
+                        $("#errorAccount").html("");
+                    }
+                }
+            });
+        }
+    });
+
+    /**
+     * 修改
+     */
+    $("#updateMess").click(function () {
+        var uname = $("#uname").val();
+        var gender = $('input[name="sex"]:checked').val();
+        var oldname = [[${user.username}]];
+        if(uname == "") {
+            $("#errorAccount").html("账号不能为空！");
+        }else {
+            $.ajax({
+                type : 'post',
+                url : '/updateMessage',
+                data : {
+                    "username" : uname,
+                    "gender" : gender,
+                    "oldname" : oldname
+                },
+                success : function (data) {
+                    if("success" == data){
+                        alert("修改成功");
+                        window.location.href = "/toPerson";
+                    }else {
+                        alert("修改失败");
+                    }
+                }
+            });
+        }
+    });
 </script>
 </html>

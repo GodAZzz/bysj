@@ -65,10 +65,21 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public String getPictureAddress(String username) {
+    public User getPictureAddress(String username) {
         User user = userMapper.checkAccountExit(username);
         String pictureaddress = user.getPictureaddress();
-        return pictureaddress;
+        String gender = user.getGender();
+        String tzlx = user.getTzlx();
+        if("".equals(pictureaddress)){
+            user.setPictureaddress("http://ppfqedo90.bkt.clouddn.com/person.jpg");
+        }
+        if("".equals(gender)){
+            user.setGender("待完善");
+        }
+        if(tzlx == null){
+            user.setTzlx("待完善");
+        }
+        return user;
     }
 
     @Override
@@ -79,6 +90,23 @@ public class UserServiceImpl implements UserService {
         }else{
             return false;
         }
+    }
+
+    @Override
+    public boolean isUpdateNameAndSex(String username, String gender, String oldname) {
+        int i = userMapper.updateNameAndSex(username, gender, oldname);
+        if(i>0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    @Override
+    public Long getUserid(String username) {
+        User user = userMapper.checkAccountExit(username);
+        Long userid = user.getUserid();
+        return userid;
     }
 
 
