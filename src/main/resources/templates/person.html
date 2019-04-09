@@ -8,87 +8,84 @@
     <link rel="stylesheet" th:href="@{/lib/bootstrap/css/bootstrap.css}">
     <link rel="stylesheet" th:href="@{/css/head_foot.css}">
 
-	
-   <!--  <link rel="stylesheet" href="../static/lib/bootstrap/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="../static/lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../static/css/head_foot.css">
     <link rel="stylesheet" href="../static/css/foodList.css"> -->
 
     <script th:src="@{/lib/jquery/jquery1.42.min.js}"></script>
     <script th:src="@{/js/jquery.SuperSlide.2.1.1.js}"></script>
 
-
-  <!--   <script src="../static/lib/jquery/jquery1.42.min.js"></script>
+    <!-- <script src="../static/lib/jquery/jquery1.42.min.js"></script>
     <script src="../static/js/jquery.SuperSlide.2.1.1.js"></script> -->
-
 </head>
 
 <body>
     <style type="text/css">
-    a{text-decoration: none;}
-    .top a{color:gold;position: absolute;top: 69%;left: 17%;;width: 80px;background: rgba(0, 0, 0, .1);border-bottom-right-radius: 17px;border-bottom-left-radius: 15px;}
-   	#main {width: 800px;margin: 0 auto;position: relative;}
-   	#main .scrollBox{margin:50px auto;}
-    .top{border: 1px solid #ddd;position: relative;margin-top: 85px;}
-    .avatarOut{height: 100px;width: 120px;position: absolute;left: 50%;bottom: 50%;margin-left: -50px;margin-bottom: -50px;background: #fff;text-align: center;}
-    .inputPic{ cursor:pointer;opacity:0;ilter:alpha(opacity=0);width:100%;height:100%;position: absolute;top: 0;left: 0;z-index: 9;}
-
-    .info{border: 1px solid #ddd;margin-top: 100px;height: 200px;}
-    .info>p:first-child{ margin-top:10px;padding-left: 32px; background: url(./img/xtubiao/sflower.png)  left center no-repeat;background-size: 40px 40px;}
-    .content{width: 500px;margin: 40px 0 0 30px;justify-content: center;}
-    .content p:first-child{margin-right: 300px;}
-    .recom,.updata{display: block;float: left;width: 85px;height: 25px;text-align: center;line-height: 25px;background:#db934e;color: #000;border-radius: 5px; }
-    .recom{margin-right: 30px;}
-    
-    /*修改信息弹出框*/
-    .card{z-index: 9;}
-    .card form{width: 200px;height:200px;margin: 50px auto;}
-	.card form div{margin-top: 20px;}
-	.card form input{border: none;border: 2px solid #07793e; border-radius: 2px;outline: none;height: 20px;}
-	.card form button{font-size: 16px; cursor: pointer; border: none;outline: none;background: #07793e;border-radius: 5px;width: 100px;height: 30px;margin-left: 63px; margin-top: 16px;}
-	.card .closer{font-size:20px;font-weight: bold;opacity: .5;cursor: pointer;text-align: right;margin-right:10px;}
-    .card .closer:hover{opacity: 1;}
-    .fade{position: absolute;width: 500px;height: 0px;top: 0;left: 50%;margin-top: -145px;margin-left: -250px;opacity: 0;transition: all .5s linear;}
-    .in{position: absolute;width: 500px;height: 290px;top: 50%;left: 50%;margin-top: -145px;margin-left: -250px;opacity: 1;transition: all .5s linear;}
+  a {text-decoration: none;}
+  .top a {color: gold;position: absolute;top: 69%;left: 17%;;width: 80px;background: rgba(0, 0, 0, .1);border-bottom-right-radius: 17px;border-bottom-left-radius: 15px;}
+  #main {width: 800px;margin: 0 auto;position: relative;}
+  #main .scrollBox {margin: 50px auto;}
+  .top { border: 1px solid #ddd; position: relative; margin-top: 85px;}
+  .avatarOut { height: 100px; width: 120px; position: absolute; left: 50%; bottom: 50%; margin-left: -50px; margin-bottom: -50px; background: #fff; text-align: center;}
+  .inputPic {cursor: pointer;opacity: 0;ilter: alpha(opacity=0);width: 100%;height: 100%;position: absolute;top: 0;left: 0;z-index: 9;}
+  .info {border: 1px solid #ddd;margin-top: 100px;height: 200px;}
+  .info>p:first-child { margin-top: 10px; padding-left: 32px; background: url(./img/xtubiao/sflower.png) left center no-repeat; background-size: 40px 40px;}
+  .content {width: 500px;margin: 40px 0 0 30px;justify-content: center;}
+  .content p:first-child { margin-right: 300px;}
+  .recom,
+  .updata {display: block;float: left;width: 85px;height: 25px;text-align: center;line-height: 25px;background: #db934e;color: #000;border-radius: 5px;}
+  .recom {margin-right: 30px;}
+  /*修改信息弹出框*/
+  .card {z-index: 9;}
+  .card form {width: 200px;height: 200px;margin: 50px auto;}
+  .card form div {margin-top: 20px;}
+  .card form input { border: none; border: 2px solid #07793e; border-radius: 2px; outline: none; height: 20px;}
+  .card form button {font-size: 16px;cursor: pointer;border: none;outline: none;background: #07793e;border-radius: 5px;width: 100px;height: 30px;margin-left: 63px;margin-top: 16px;}
+  .card .closer {font-size: 20px;font-weight: bold;opacity: .5;cursor: pointer;text-align: right;margin-right: 10px;}
+  .card .closer:hover {opacity: 1;}
+  .fade {position: absolute;width: 500px;height: 0px;top: 0;left: 50%;margin-top: -145px;margin-left: -250px;opacity: 0;transition: all .5s linear;}
+  .in {position: absolute;width: 500px;height: 290px;top: 50%;left: 50%;margin-top: -145px;margin-left: -250px;opacity: 1;transition: all .5s linear;}
     </style>
-
 </body>
 <!--头部-->
-<div th:include="header::header" ></div>
-
+<div th:include="header::header"></div>
 <!--主内容-->
 <div id="main">
-	<!-- 修改信息框 -->
-<div class="card fade">
-	<div class="closer">×</div>
-	<form id="updateMessage">
-        <span id="errorAccount"
-        style="color:red;padding-left:3px;"></span>
-	<div><label for="uname">昵称：</label><input type="text" name="uname" id="uname"></div>
-	<div>性别：
-		<input type="radio" name="sex" id="men" checked="checked" value="男">男
-		<input type="radio" name="sex" id="woman" value="女">女
-	</div>
-	<button id="updateMess">修改</button>
-	</form>
-</div>
+    <!-- 修改信息框 -->
+    <div class="card fade">
+        <div class="closer">×</div>
+        <form id="updateMessage">
+            <span id="errorAccount" style="color:red;padding-left:3px;"></span>
+            <div>
+                <label for="uname">昵称：</label>
+                <input type="text" name="uname" id="uname">
+            </div>
+            <div>性别：
+                <input type="radio" name="sex" id="men" checked="checked" value="男">男
+                <input type="radio" name="sex" id="woman" value="女">女
+            </div>
+            <button id="updateMess">修改</button>
+        </form>
+    </div>
     <!-- 头像 -->
     <div class="top">
-      <div class="avatarOut">
-          <form action="/upload" method="post" enctype="multipart/form-data">
-          <input type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*" name="file" id="file">
-
-          <img class="avatar" style="width: 100px;height: 100px;border-radius: 50%;"  th:src="${user.pictureaddress}">
-             <a href="javascript:;">修改头像</a>
-          </form>
-    </div>
+        <div class="avatarOut">
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*" name="file"
+                    id="file">
+                <img class="avatar" style="width: 100px;height: 100px;border-radius: 50%;"
+                    th:src="${user.pictureaddress}">
+                <a href="javascript:;">修改头像</a>
+            </form>
+        </div>
     </div>
     <!-- 信息 -->
     <div class="info">
         <p>基本资料</p>
         <div class="content">
-        	<div style="display: flex;">
-            <p>昵称：<span th:text="${user.username}" id="nc"></span></p>
-            <p>性别：<span th:text="${user.gender}"></span></p>
+            <div style="display: flex;">
+                <p>昵称：<span th:text="${user.username}" id="nc"></span></p>
+                <p>性别：<span th:text="${user.gender}"></span></p>
             </div>
             <p>体质类型：<span th:text="${user.tzlx}"></span></p>
         </div>
@@ -97,20 +94,28 @@
             <a href="#" class="updata">修改信息</a>
         </div>
     </div>
-
     <!-- 收藏 -->
     <div class="scrollBox">
         <div class="ohbox">
             <ul class="piclist">
-                <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}" style="width:185px;height:140px;"/><span>益于血管修复鱼头豆腐煲</span></a></li>
-                <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}" style="width:185px;height:140px;"/><span>益于血管修复鱼头豆腐煲</span></a></li>
-                <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}" style="width:185px;height:140px;"/><span>益于血管修复鱼头豆腐煲</span></a></li>
-                <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}" style="width:185px;height:140px;"/><span>益于血管修复鱼头豆腐煲</span></a></li>
-                <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}" style="width:185px;height:140px;"/><span>益于血管修复鱼头豆腐煲</span></a></li>
-                <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}" style="width:185px;height:140px;"/><span>益于血管修复鱼头豆腐煲</span></a></li>
-                <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}" style="width:185px;height:140px;"/><span>益于血管修复鱼头豆腐煲</span></a></li>
-                <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}" style="width:185px;height:140px;"/><span>益于血管修复鱼头豆腐煲</span></a></li>
-                <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}" style="width:185px;height:140px;"/><span>益于血管修复鱼头豆腐煲</span></a></li>
+                <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}"
+                            style="width:185px;height:140px;" /><span>益于血管修复鱼头豆腐煲</span></a></li>
+                <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}"
+                            style="width:185px;height:140px;" /><span>益于血管修复鱼头豆腐煲</span></a></li>
+                <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}"
+                            style="width:185px;height:140px;" /><span>益于血管修复鱼头豆腐煲</span></a></li>
+                <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}"
+                            style="width:185px;height:140px;" /><span>益于血管修复鱼头豆腐煲</span></a></li>
+                <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}"
+                            style="width:185px;height:140px;" /><span>益于血管修复鱼头豆腐煲</span></a></li>
+                <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}"
+                            style="width:185px;height:140px;" /><span>益于血管修复鱼头豆腐煲</span></a></li>
+                <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}"
+                            style="width:185px;height:140px;" /><span>益于血管修复鱼头豆腐煲</span></a></li>
+                <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}"
+                            style="width:185px;height:140px;" /><span>益于血管修复鱼头豆腐煲</span></a></li>
+                <li><a href="#" target="_blank"><img th:src="@{/img/index_food/f1.jpg}"
+                            style="width:185px;height:140px;" /><span>益于血管修复鱼头豆腐煲</span></a></li>
             </ul>
         </div>
         <div class="pageBtn">
@@ -124,12 +129,18 @@
         </div>
     </div>
     <script type="text/javascript">
-        jQuery(".scrollBox").slide({ titCell: ".list li", mainCell: ".piclist", effect: "left", vis: 3, scroll: 3, delayTime: 800, trigger: "click", easing: "easeOutCirc" });
+        jQuery(".scrollBox").slide({
+            titCell: ".list li",
+            mainCell: ".piclist",
+            effect: "left",
+            vis: 3,
+            scroll: 3,
+            delayTime: 800,
+            trigger: "click",
+            easing: "easeOutCirc"
+        });
     </script>
-
-        </div>
-
-
+</div>
 <!--底部-->
 <div th:include="footer::footer"></div>
 <script th:src="@{/lib/jquery/jquery.min.js}" type="text/javascript"></script>
@@ -139,24 +150,24 @@
     /**
      * 上传图片
      */
-    $("input[type = 'file']").change(function () {//input框的内容改变就ajax上传
+    $("input[type = 'file']").change(function () { //input框的内容改变就ajax上传
         var formData = new FormData();
-        formData.append("file",document.getElementById("file").files[0]);
+        formData.append("file", document.getElementById("file").files[0]);
         $.ajax({
-            type : "POST",
-            contentType : false,
-            processData : false,
-            url : "/upload",
-            data : formData,
-            async : true,
-            success : function (data){
-                if("empty"==data){
+            type: "POST",
+            contentType: false,
+            processData: false,
+            url: "/upload",
+            data: formData,
+            async: true,
+            success: function (data) {
+                if ("empty" == data) {
                     alert("请先登录");
                     return;
-                }else if("error"==data){
+                } else if ("error" == data) {
                     alert("上传失败");
                     return;
-                }else {
+                } else {
                     alert("上传成功");
                     window.location.href = "/toPerson";
                 }
@@ -164,31 +175,31 @@
         });
     });
 
-    $(".updata").click(function(){
-				$(".card").addClass("in").children(".closer").click(function(){
-					$(".card").removeClass("in")
-				});
+    $(".updata").click(function () {
+        $(".card").addClass("in").children(".closer").click(function () {
+            $(".card").removeClass("in")
+        });
 
-			})
+    })
 
     /**
      * 验证昵称
      */
     $("#uname").blur(function () {
         var uname = $("#uname").val();
-        if(uname == ""){
+        if (uname == "") {
             $("#errorAccount").html("账号不能为空！");
-        }else {
+        } else {
             $.ajax({
-                url : '/register/checkAccountExit',
-                type : 'post',
-                data : {
-                    "username" : uname
+                url: '/register/checkAccountExit',
+                type: 'post',
+                data: {
+                    "username": uname
                 },
-                success : function (data) {
-                    if(data == "账号已存在"){
+                success: function (data) {
+                    if (data == "账号已存在") {
                         $("#errorAccount").html("该昵称已被使用");
-                    }else {
+                    } else {
                         $("#errorAccount").html("");
                     }
                 }
@@ -203,22 +214,22 @@
         var uname = $("#uname").val();
         var gender = $('input[name="sex"]:checked').val();
         // var oldname = [[${user.username}]];
-        if(uname == "") {
+        if (uname == "") {
             $("#errorAccount").html("账号不能为空！");
-        }else {
+        } else {
             $.ajax({
-                type : 'post',
-                url : '/updateMessage',
-                data : {
-                    "username" : uname,
-                    "gender" : gender,
-                    "oldname" : oldname
+                type: 'post',
+                url: '/updateMessage',
+                data: {
+                    "username": uname,
+                    "gender": gender,
+                    "oldname": oldname
                 },
-                success : function (data) {
-                    if("success" == data){
+                success: function (data) {
+                    if ("success" == data) {
                         alert("修改成功");
                         window.location.href = "/toPerson";
-                    }else {
+                    } else {
                         alert("修改失败");
                     }
                 }
@@ -226,4 +237,5 @@
         }
     });
 </script>
+
 </html>
