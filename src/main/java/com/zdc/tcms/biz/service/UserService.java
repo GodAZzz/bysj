@@ -19,4 +19,6 @@ public interface UserService {
     boolean isUpdateNameAndSex(String username, String gender, String oldname);
 
     Long getUserid(String username);
+
+    String getGenderByName(String username);
 }

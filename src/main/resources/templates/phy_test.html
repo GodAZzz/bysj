@@ -129,33 +129,23 @@
         <!-- 测试题主内容 -->
         <div class="py_test">
             <table></table>
-            <!-- 开始 -->
-            <div class="start "><img th:src="@{/img/start.png}" alt=""></div>
-            <!-- 选择题 -->
-            <div class='chosex fade'>
-                <p>请选择你的性别</p>
-                <ul>
-                    <li>男</li>
-                    <li>女</li>
+            <div class="question">
+                <p th:text="${pageInfo.items.get(0).question}"></p>
+                <ul id="tcontent">
+                    <li th:if="${pageInfo.items.get(0).login} == 'a'" th:value="1">没有(根本不)</li>
+                    <li th:if="${pageInfo.items.get(0).login} == 'b'" th:value="5">没有(根本不)</li>
+                    <li th:if="${pageInfo.items.get(0).login} == 'a'" th:value="2">很少(有一点)</li>
+                    <li th:if="${pageInfo.items.get(0).login} == 'b'" th:value="4">很少(有一点)</li>
+                    <li th:if="${pageInfo.items.get(0).login} == 'a'" th:value="3">有时(有些)</li>
+                    <li th:if="${pageInfo.items.get(0).login} == 'b'" th:value="3">有时(有些)</li>
+                    <li th:if="${pageInfo.items.get(0).login} == 'a'" th:value="4">经常(相当)</li>
+                    <li th:if="${pageInfo.items.get(0).login} == 'b'" th:value="2">经常(相当)</li>
+                    <li th:if="${pageInfo.items.get(0).login} == 'a'" th:value="5">总是(非常)</li>
+                    <li th:if="${pageInfo.items.get(0).login} == 'b'" th:value="1">总是(非常)</li>
                 </ul>
                 <div class="navigator clear">
-                    <div class="pre"><a href="javascript:;">上一题</a></div>
-                    <div class="next"><a href="javascript:;">下一题</a></div>
-                </div>
-                <div class="text"></div>
-            </div>
-            <div class="question fade">
-                <p>您容易头晕或站起时晕眩吗？</p>
-                <ul>
-                    <li>没有(根本不)</li>
-                    <li>很少(有一点)</li>
-                    <li>有时(有些)</li>
-                    <li>经常(相当)</li>
-                    <li>总是(非常)</li>
-                </ul>
-                <div class="navigator clear">
-                    <div class="pre"><a href="javascript:;">上一题</a></div>
-                    <div class="next"><a href="javascript:;">下一题</a></div>
+                    <div class="pre"><a th:href="@{/toPhyTest(currentPage=${pageInfo.currentPage}-1)}" onclick="return checkPre()">上一题</a></div>
+                    <div class="next"><a th:href="@{/toPhyTest(currentPage=${pageInfo.currentPage}+1)}" onclick="return checkNext()">下一题</a></div>
                 </div>
                 <div class="text"></div>
             </div>
@@ -165,21 +155,21 @@
     <script th:src="@{/lib/bootstrap/js/bootstrap.min.js}" type="text/javascript"></script>
     <script th:src="@{/js/jquery.SuperSlide.2.1.1.js}" type="text/javascript"></script>
     <script th:inline="javascript">
-    /**
+    /*/!**
      * 点击开始图标
-     */
+     *!/
     $('.start').click(function() {
         $(this).addClass('fade').next().removeClass('fade')
     })
-    /**
+    /!**
      * 性别选择
-     */
+     *!/
     $('.chosex li').click(function() {
         $(this).addClass("selected").parents(".chosex").addClass('fade').next().removeClass('fade');
     })
-    /**
+    /!**
      * 下一题
-     */
+     *!/
     $('.next').click(function() {
         var li = $(this).parent().prev().children("li")
         // console.log(li)
@@ -187,14 +177,85 @@
             $(this).parent().next().html("*请选择*")
         }
     })
-    /**
+    /!**
      * 上一题
-     */
+     *!/
     $('.pre').click(function() {
         $(this).parent().parent().addClass('fade').prev().removeClass('fade')
         $('.chosex li').removeClass('selected')
         $('text').html("")
+    })*/
+    var storage=window.localStorage;
+    /**
+     * 选中ul里面的li
+     */
+    $(document).ready(function () {
+        var Uarry=$("#tcontent li");//获取所有的li元素
+        $("#tcontent li").click(function () {
+            var parentid = [[${pageInfo.items.get(0).parentid}]];
+            var count=$(this).index();//获取li的下标
+            var Tresult=Uarry.eq(count).val();
+            var question=[[${pageInfo.items.get(0).question}]];
+            storage.setItem("xz",Tresult);
+            if(Tresult == "" || Tresult == null){
+                alert("请选择");
+            }else {
+                $.ajax({
+                    url : '/savePhyTest',
+                    type : 'post',
+                    data : {
+                        grade : Tresult,
+                        question : question,
+                        parentid : parentid
+                    },
+                    success : function (result) {
+                        if("success"==result){
+                            $("#tcontent li").eq(count).addClass('selected').siblings().removeClass('selected')
+                        }else {
+                            alert("错误");
+                        }
+                    }
+                });
+            }
+        });
     })
+
+    /**
+     * 点击下一页的验证
+     */
+    function checkNext() {
+        var currentPage = [[${pageInfo.currentPage}]];
+        var totalPage = [[${pageInfo.totalPage}]];
+        var xz = storage.getItem("xz");
+        storage.clear();
+            if(currentPage < totalPage){
+                if(xz!=null){
+                    return true;
+                }else {
+                    alert("请选择选项");
+                    return false;
+                }
+            }else {
+                if(xz!=null){
+                    alert("已做完,正在计算体质");
+                    window.location.href = "/toPhyResult";
+                    return false;
+                }else {
+                    alert("请选择选项");
+                    return false;
+                }
+            }
+
+        }
+        
+        function checkPre() {
+            var currentPage = [[${pageInfo.currentPage}]];
+            if(currentPage > 1){
+                return true;
+            }
+            alert("已到页首,无法加载更多");
+            return false;
+        }
     </script>
     <!--底部-->
     <div th:include="footer::footer"></div>

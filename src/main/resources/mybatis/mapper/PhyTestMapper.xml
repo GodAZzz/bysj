@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zdc.tcms.biz.mapper.PhyTestMapper">
+    <select id="findAll" resultType="com.zdc.tcms.biz.entity.PhyTest">
+        SELECT * FROM phy_test
+    </select>
+
+    <select id="findCountNums" resultType="java.lang.Integer">
+      SELECT count(1) from phy_test
+    </select>
+    
+    <select id="getAllTzlx" resultType="com.zdc.tcms.biz.entity.PhyTzlx">
+      SELECT * FROM phy_tzlx
+    </select>
+    
+    <select id="getPhyTestByParent" parameterType="java.util.Map" resultType="com.zdc.tcms.biz.entity.PhyTest">
+      SELECT * FROM phy_test WHERE parentid=#{parentid}
+    </select>
+
+    <insert id="insertResult" parameterType="com.zdc.tcms.biz.entity.PhyResult">
+      INSERT INTO phy_result(resultid,userid,question,grades,parentid) VALUES (#{resultid},#{userid},#{question},#{grades},#{parentid})
+    </insert>
+
+    <select id="getByUserAndQuestion" parameterType="java.util.Map" resultType="com.zdc.tcms.biz.entity.PhyResult">
+      SELECT * FROM phy_result WHERE userid=#{userid} AND question=#{question}
+    </select>
+
+    <update id="updateGrade" parameterType="java.util.Map">
+      UPDATE phy_result SET grades=#{grades} WHERE userid=#{userid} AND question=#{question}
+    </update>
+
+    <select id="getPhyResultByParent" parameterType="java.util.Map" resultType="com.zdc.tcms.biz.entity.PhyResult">
+      SELECT * FROM phy_result WHERE parentid=#{parentid}
+    </select>
+    
+    <insert id="insertGrades" parameterType="com.zdc.tcms.biz.entity.PhyGrades">
+      INSERT INTO phy_grades(gradesid,userid,tzlx,grade) VALUES (#{gradesid},#{userid},#{tzlx},#{grade})
+    </insert>
+    
+    <select id="getByUserAndtzlx" parameterType="java.util.Map" resultType="com.zdc.tcms.biz.entity.PhyGrades">
+      SELECT * FROM phy_grades WHERE userid=#{userid} AND tzlx=#{tzlx}
+    </select>
+
+    <update id="updateGrades" parameterType="java.util.Map">
+      UPDATE phy_grades SET grade=#{grade} WHERE userid=#{userid} AND tzlx=#{tzlx}
+    </update>
+
+    <select id="getAllGradesByUser" parameterType="java.util.Map" resultType="com.zdc.tcms.biz.entity.PhyGrades">
+      SELECT * FROM phy_grades WHERE userid=#{userid}
+    </select>
+</mapper>

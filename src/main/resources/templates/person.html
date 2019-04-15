@@ -213,7 +213,7 @@
     $("#updateMess").click(function () {
         var uname = $("#uname").val();
         var gender = $('input[name="sex"]:checked').val();
-        // var oldname = [[${user.username}]];
+        var oldname = [[${user.username}]];
         if (uname == "") {
             $("#errorAccount").html("账号不能为空！");
         } else {

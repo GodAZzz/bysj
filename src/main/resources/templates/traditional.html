@@ -70,7 +70,7 @@
 <div class="test">
     <p>体质测试</p>
     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人分九种体质，生理调养各有不同！体质现象是生命活动的一种重要表现形式，是指人体生命过程中，在先天禀赋和后天获得的基础上所形成的的形态结构、生理功能和心理状态方面综合的、相对稳定的固有特质。</p>
-    <a href="javascript:;">测试体质</a>
+    <a id="test">测试体质</a>
 </div>
 
 <div class="info">
@@ -107,4 +107,22 @@
     <div th:include="footer::footer"></div>
 </body>
 </body>
+<script th:src="@{/lib/jquery/jquery.min.js}" type="text/javascript"></script>
+<script th:src="@{/lib/bootstrap/js/bootstrap.min.js}" type="text/javascript"></script>
+<script th:src="@{/js/jquery.SuperSlide.2.1.1.js}" type="text/javascript"></script>
+<script th:inline="javascript">
+    /**
+     * 有性别才能进行体质测试
+     */
+    $("#test").click(function () {
+        var gender = [[${gender}]];
+        debugger;
+        if("empty"==gender){
+            alert("请先在个人中心完善性别");
+            window.location.href = "/toPerson";
+        }else {
+            window.location.href = "/toPhyTest";
+        }
+    });
+    </script>
 </html>

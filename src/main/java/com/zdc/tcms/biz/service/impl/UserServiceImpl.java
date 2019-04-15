@@ -109,5 +109,17 @@ public class UserServiceImpl implements UserService {
         return userid;
     }
 
+    @Override
+    public String getGenderByName(String username) {
+        User user = userMapper.checkAccountExit(username);
+        String gender = user.getGender();
+        if("".equals(gender)){
+            return "empty";
+        }else {
+            return gender;
+        }
+
+    }
+
 
 }

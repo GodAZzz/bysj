@@ -22,7 +22,7 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry){
-        registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/toPerson");
+        registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/toPerson", "/jumpToTranditional");
     }
 }
 
