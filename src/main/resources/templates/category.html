@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分类</title>
+    <link rel="stylesheet" th:href="@{/lib/bootstrap/css/bootstrap.css}">
+    <!-- <link rel="stylesheet" href="../static/lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/lib/bootstrap/js/bootstrap.min.js">
+    <script src="../static/lib/jquery/jquery-3.3.1.min.js"></script> -->
+    <link rel="stylesheet" th:href="@{/css/head_foot.css}">
+</head>
+<style>
+a{text-decoration: none;color: #000;}
+#main{width: 1000px;margin: 0 auto;}
+.list>li {padding-top: 20px; list-style: none;display: flex;justify-content: space-between; width: 100%;border-bottom: 1px solid #999;}
+.list img {width: 180px;height: 133px;}
+.content{width: 750px;}
+.image{margin-bottom: 10px;border:1px solid #dee2e6;padding:4px 4px 0px 2px;border-radius: 5px;background-color: #fff;}
+.title>a:hover{color: #f19100;}
+.text{overflow: hidden;color: #999;margin-top: 30px; font-size: 14px;}
+
+</style>
+
+<body>
+    <!-- 头部 -->
+    <div th:include="header::header"></div>
+    <!-- 主内容 -->
+    <div id="main">
+        <ul class="list">
+            <li>
+             <div class="image"><img src="../static/img/index_food/f1.jpg"></div>  
+                <div class="content">
+                    <p class="title"><a href="#">注意！这10种食品会让你爆肥</a></p>
+                    <p class="text">夏天到了，看到大街上的长裙飘飘或者热裤美腿，是不是很是羡慕？
+                        减肥的念头是不是又开始蠢蠢欲动呢？但是，单纯的绝食减肥似乎很不可取，我们的身体也会受不了，于是很多人在这个时候就进行“选择性”饮食。
+                        朋友说吃一些沙拉、鲜榨果汁之类的食品不但健康，还有助于减肥，这到底是不是真的呢？
+                    </p>
+                </div>
+            </li>
+
+            <li>
+                    <div class="image"><img src="../static/img/index_food/f1.jpg"></div>  
+                       <div class="content">
+                           <p class="title"><a href="#">注意！这10种食品会让你爆肥</a></p>
+                           <p class="text">夏天到了，看到大街上的长裙飘飘或者热裤美腿，是不是很是羡慕？
+                               减肥的念头是不是又开始蠢蠢欲动呢？但是，单纯的绝食减肥似乎很不可取，我们的身体也会受不了，于是很多人在这个时候就进行“选择性”饮食。
+                               朋友说吃一些沙拉、鲜榨果汁之类的食品不但健康，还有助于减肥，这到底是不是真的呢？
+                           </p>
+                       </div>
+                   </li>
+        </ul>
+
+<!-- 分页 -->
+<div class="container">
+
+        <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-end">
+                  <li class="page-item  disabled"><a class="page-link" href="#">上一页</a></li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">下一页</a></li>
+                </ul>
+              </nav>
+
+    </div>
+    </div>
+    <!--底部-->
+    <div th:include="footer::footer"></div>
+</body>
+
+</html>

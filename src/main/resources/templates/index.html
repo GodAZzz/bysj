@@ -93,13 +93,13 @@
                 </div>
                 
                 <div class="col-sm-12 clear mt-3" >
-                    <ul class="foodlist clear" th:each="food,foodStat : ${fourFood}">
-                        <li>
+                    <ul class="foodlist clear" >
+                        <li th:each="food,foodStat : ${fourFood}">
                             <a th:href="@{/toFoodDetails(foodname=${food.foodname})}"><img th:src="${food.pictureaddress}"></img></a>
                             <p class="foodname"><a th:href="@{/toFoodDetails(foodname=${food.foodname})}" th:text="${food.foodname}"></a></p>
                             <p class="fooddesc" th:text="${food.introduce}"></p>
                         </li>
-                        <!--<li>
+                        <!-- <li>
                             <a th:href="@{/toFoodDetails}"><img th:src="@{/img/index_food/f2.jpg}"></img></a>
                             <p class="foodname"><a href="#">益于血管修复鱼头豆腐煲</a></p>
                             <p class="fooddesc">在深秋时，老年人警惕血管疾病，吃些豆腐，跟鱼头做汤，营养高，含钙量也高，对于身体的帮助很大，非常适合全家人食用哦。</p>
@@ -113,7 +113,7 @@
                             <a th:href="@{/toFoodDetails}"><img th:src="@{/img/index_food/f4.jpg}"></img></a>
                             <p class="foodname"><a href="#">益于血管修复鱼头豆腐煲</a></p>
                             <p class="fooddesc">在深秋时，老年人警惕血管疾病，吃些豆腐，跟鱼头做汤，营养高，含钙量也高，对于身体的帮助很大，非常适合全家人食用哦。</p>
-                        </li>-->
+                        </li> -->
                     </ul>
                 </div>
             </div>
