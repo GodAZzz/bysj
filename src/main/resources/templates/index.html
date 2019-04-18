@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8"></meta>
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 "></meta>
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"></meta>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"></meta>
     <title>中医食疗</title>
     <link rel="stylesheet" th:href="@{/lib/bootstrap/css/bootstrap.css}"></link>
-    <link rel="stylesheet" th:href="@{/css/font-awesome/css/font-awesome.min.css}"></link>
- 
+    <!-- <link rel="stylesheet" th:href="@{/css/font-awesome/css/font-awesome.min.css}"></link> -->
+    
     <script th:src="@{/lib/jquery/jquery-3.3.1.js}"></script>
-    <script th:src="@{/lib/jquery/jquery1.42.min.js}"></script>
-    <script th:src="@{/js/jquery.SuperSlide.2.1.1.js}"></script>
     <script th:src="@{/lib/bootstrap/js/bootstrap.min.js}"></script>
     <link rel="stylesheet" th:href="@{/css/index.css}"></link>
 </head>
@@ -50,23 +48,23 @@
     <div id="demo" class="carousel">
         <div class="carousel-inner" data-ride="carousel">
             <div class="carousel-item active">
-                <img th:src="@{/img/banner/b1.jpg}"></img>
+                <img th:src="@{/img/banner/b1.jpg}">
             </div>
 
-            <div class="carousel-item ">
-                <img th:src="@{/img/banner/b2.jpg}"></img>
+            <div class="carousel-item">
+                <img th:src="@{/img/banner/b2.jpg}">
             </div>
 
-            <div class="carousel-item ">
-                <img th:src="@{/img/banner/b3.jpg}"></img>
+            <div class="carousel-item">
+                <img th:src="@{/img/banner/b3.jpg}">
             </div>
 
-            <div class="carousel-item ">
-                <img th:src="@{/img/banner/b4.jpg}"></img>
+            <div class="carousel-item">
+                <img th:src="@{/img/banner/b4.jpg}">
             </div>
 
-            <div class="carousel-item ">
-                <img th:src="@{/img/banner/b5.jpg}"></img>
+            <div class="carousel-item">
+                <img th:src="@{/img/banner/b5.jpg}">
             </div>
         </div>
         <ul class="carousel-indicators my-indicator">
@@ -88,52 +86,38 @@
 
     <!--膳食养生-->
     <div class="row m-0">
-        <div class="picScroll mt-3 col-sm-12 col-md-8">
-            <div class="hd col-sm-12 ">
-                <h2>膳食养生</h2>
-            </div>
-            <div class="bd col-sm-12  ">
-
-                <a href="javascript:void(0)" class="prev"></a>
-                <a href="javascript:void(0)" class="next"></a>
-
-                <div class="scrollWrap row m-0">
-                    <ul class="picList ">
+       
+        <div class="healthFood mt-3 col-sm-12 col-md-8">
+                <div class="title col-sm-12">
+                    <h2>膳食养生</h2>
+                </div>
+                
+                <div class="col-sm-12 clear mt-3" >
+                    <ul class="foodlist clear">
                         <li>
                             <a th:href="@{/toFoodDetails}"><img th:src="@{/img/index_food/f1.jpg}"></img></a>
-                            <p class="movielist_tt"><a href="#">益于血管修复鱼头豆腐煲</a></p>
-                            <p>在深秋时，老年人警惕血管疾病，吃些豆腐，跟鱼头做汤，营养高，含钙量也高，对于身体的帮助很大，非常适合全家人食用哦。</p>
+                            <p class="foodname"><a href="#">益于血管修复鱼头豆腐煲</a></p>
+                            <p class="fooddesc">在深秋时，老年人警惕血管疾病，吃些豆腐，跟鱼头做汤，营养高，含钙量也高，对于身体的帮助很大，非常适合全家人食用哦。</p>
                         </li>
                         <li>
                             <a th:href="@{/toFoodDetails}"><img th:src="@{/img/index_food/f2.jpg}"></img></a>
-                            <p class="movielist_tt"><a href="#">益于血管修复鱼头豆腐煲</a></p>
-                            <p>在深秋时，老年人警惕血管疾病，吃些豆腐，跟鱼头做汤，营养高，含钙量也高，对于身体的帮助很大，非常适合全家人食用哦。</p>
+                            <p class="foodname"><a href="#">益于血管修复鱼头豆腐煲</a></p>
+                            <p class="fooddesc">在深秋时，老年人警惕血管疾病，吃些豆腐，跟鱼头做汤，营养高，含钙量也高，对于身体的帮助很大，非常适合全家人食用哦。</p>
                         </li>
                         <li>
                             <a th:href="@{/toFoodDetails}"><img th:src="@{/img/index_food/f3.jpg}"></img></a>
-                            <p class="movielist_tt"><a href="#">益于血管修复鱼头豆腐煲</a></p>
-                            <p>在深秋时，老年人警惕血管疾病，吃些豆腐，跟鱼头做汤，营养高，含钙量也高，对于身体的帮助很大，非常适合全家人食用哦。</p>
+                            <p class="foodname"><a href="#">益于血管修复鱼头豆腐煲</a></p>
+                            <p class="fooddesc">在深秋时，老年人警惕血管疾病，吃些豆腐，跟鱼头做汤，营养高，含钙量也高，对于身体的帮助很大，非常适合全家人食用哦。</p>
                         </li>
                         <li>
                             <a th:href="@{/toFoodDetails}"><img th:src="@{/img/index_food/f4.jpg}"></img></a>
-                            <p class="movielist_tt"><a href="#">益于血管修复鱼头豆腐煲</a></p>
-                            <p>在深秋时，老年人警惕血管疾病，吃些豆腐，跟鱼头做汤，营养高，含钙量也高，对于身体的帮助很大，非常适合全家人食用哦。</p>
-                        </li>
-                        <li>
-                            <a th:href="@{/toFoodDetails}"><img th:src="@{/img/index_food/f4.jpg}"></img></a>
-                            <p class="movielist_tt"><a href="#">益于血管修复鱼头豆腐煲</a></p>
-                            <p>在深秋时，老年人警惕血管疾病，吃些豆腐，跟鱼头做汤，营养高，含钙量也高，对于身体的帮助很大，非常适合全家人食用哦。</p>
-                        </li>
-                        <li>
-                            <a th:href="@{/toFoodDetails}"><img th:src="@{/img/index_food/f4.jpg}"></img></a>
-                            <p class="movielist_tt"><a href="#">益于血管修复鱼头豆腐煲</a></p>
-                            <p>在深秋时，老年人警惕血管疾病，吃些豆腐，跟鱼头做汤，营养高，含钙量也高，对于身体的帮助很大，非常适合全家人食用哦。</p>
+                            <p class="foodname"><a href="#">益于血管修复鱼头豆腐煲</a></p>
+                            <p class="fooddesc">在深秋时，老年人警惕血管疾病，吃些豆腐，跟鱼头做汤，营养高，含钙量也高，对于身体的帮助很大，非常适合全家人食用哦。</p>
                         </li>
                     </ul>
                 </div>
-
             </div>
-        </div>
+
         <!--食物库-->
         <div class="col-md-4 col-sm-12 p-4 tool mt-3">
             <h4 class="tool-h  ">食物库</h4>
@@ -149,18 +133,10 @@
             </div>
         </div>
     </div>
-   <script type="text/javascript">jQuery(".picScroll").slide({
-        mainCell: ".picList",
-        effect: "left",
-        vis: 4,
-        pnLoop: false,
-        scroll: 4,
-        autoPage: true
-    });
-    </script> 
+
     <!--体质测试-->
     <div class="row mt-5 heath justify-content-between">
-        <div class="col-sm-12 col-md-4 border">
+        <div class="col-sm-12 col-md-4 border ">
             <h3 class="pt-3">体质养生</h3>
             <div class="mt-1 p-4 heath-b">
                 <ul class="list-unstyled list-group">
@@ -174,14 +150,14 @@
             </div>
         </div>
 
-        <div class="col-sm-12 col-md-3 border">
+        <div class="col-sm-12 col-md-3 border mt-sm-3 mt-md-0">
             <h3 class="pt-3">体质测试</h3>
             <p class="mt-2 p-4">
                 人分九种体质，生理调养各有不同！体质现象是生命活动的一种重要表现形式，是指人体生命过程中，在先天禀赋和后天获得的基础上所形成的的形态结构、生理功能和心理状态方面综合的、相对稳定的固有特质。</p>
             <a href="#" class="more mt-5">测试体质</a>
         </div>
 
-        <div class="col-sm-12 col-md-4 border">
+        <div class="col-sm-12 col-md-4 border mt-sm-3 mt-md-0">
             <h3 class="pt-3">养生专题</h3>
             <div class="mt-1 p-4 heath-b">
                 <ul class="list-unstyled list-group">
@@ -197,11 +173,11 @@
     </div>
     <!--中医-->
     <div class="row mt-5  tradition ">
-        <div class="col-sm-6 ">
-            <img th:src="@{/img/foot.jpg}" class="img-thumbnail"></img>
+        <div class="col-sm-12 col-md-6 ">
+            <img th:src="@{/img/foot.jpg}" class="img-thumbnail" ></img>
         </div>
 
-        <div class="col-sm-12 pt-5 col-md-6 ">
+        <div class="col-sm-12 pt-5 col-md-6 mt-sm-3 mt-md-0">
             <h3 class="pt-3 mb-3"><a href="javascript:;">中医九种体质</a></h3>
             <div class="row">
                 <div class="float-left col-4">

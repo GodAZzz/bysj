@@ -8,7 +8,7 @@ a:hover{color: #777777;text-decoration: none;}
 .my-nav{padding-left: 0;padding-right: 0;background: url(../img/nav.png) no-repeat center left;background-size: 20px; }
 
 /*底部*/
-footer{margin-top: 20px;}
+footer{margin-top: 100px;}
 footer a{margin: 10px;}
 footer a:hover{color: #999;}
 footer p:nth-of-type(1) span{color:#ddd;}

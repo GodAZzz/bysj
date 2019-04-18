@@ -5,6 +5,7 @@ body{background-color: #fff3e6;}
 h1,h2,h3,h4,h5,h6{color: #5a8962;margin: 0;font-size: 17px;}
 a{color: #000;text-decoration: none;}
 a:hover{color: #777777;text-decoration: none;}
+.clear::after{content: "";display: table;clear: both;}
 /*logo*/
 .logo img{width: 290px;height: 160px;}
 
@@ -25,26 +26,15 @@ a:hover{color: #777777;text-decoration: none;}
 .my-control:hover{background-color: rgba(0,0,0,.3)}
 
 /*膳食养生*/
-.picScroll .hd{height:36px;line-height:35px;padding:0; background:#f4f4f4; border-radius: 10px;}
-.picScroll .hd h2{ width:100%; padding-left: 45px; float: left;line-height:36px;background: url(../img/main.png) no-repeat left -321px}
-.picScroll .bd{ position:relative;  }
-.picScroll .prev,.picScroll .next{ position: absolute; top: 44px; left:-1px; display: block; width: 26px; height: 64px; background: url(../img/index_food/slide_tigger.png) 0 -65px; z-index: 9; overflow: hidden;}
-.picScroll .next{ left:auto; right:-1px; background-position: -26px -65px; }
-.picScroll .prev:hover{ background-position:0 -130px; }
-.picScroll .next:hover{ background-position:-26px -130px; }
-.picScroll .prevStop{ background-position:0 -65px !important; }
-.picScroll .nextStop{ background-position:-26px -65px !important; }
-.picScroll .scrollWrap{ padding-left:0; }
-.picScroll ul{ overflow:hidden; zoom:1; }
-.picScroll li{ width:151px; margin: 15px 25px 10px 0; position:relative; float:left; display:inline; }
-.picList img  {display:block;background:#ddd;width:150px;}
-.picScroll li>p:nth-of-type(1){text-align: center;margin-bottom:10px;}
-.picScroll li>p:nth-of-type(1) a:hover{color:#f19100; }
-.picScroll li p {margin-top:5px;color:#999;line-height:15px;overflow:hidden;margin-bottom: 0;white-space:nowrap;text-overflow:ellipsis;overflow: hidden;}
-.picScroll li .txt1 a{color:#333;}
-.picScroll li .movielist_tt {position:relative;height:16px;line-height:16px;padding-right:30px;overflow:hidden;position:relative;}
-.picScroll li .movielist_tt a {font-size:14px;}
-.picScroll li .score {color:#FF6600;position:absolute;top:0;right:10px;}
+.healthFood .title {height: 36px;line-height: 35px;padding: 0;background: #f4f4f4;border-radius: 10px;}
+.healthFood .title h2 {width: 100%;padding-left: 45px;float: left;line-height: 36px;background: url(../img/main.png) no-repeat left -321px;color: #5a8962;font-size: 17px;}
+.foodlist {padding: 0;}
+.foodlist img {width: 95%;height: 110px;}
+.foodlist li {float: left;list-style: none;width:25%;}
+.fooddesc,.foodname {overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-bottom: 0;}
+.foodname>a{font-size: 14px;color: #000;}
+.foodname>a:hover{color: #f19100;text-decoration: none;}
+.fooddesc{font-size: 13px;color: #999;}
 /*养生工具*/
 .tool{background-color: #f8f7f7;border-radius: 10px;}
 .tool-h{padding-left: 45px;background: url(../img/main.png) no-repeat left -430px;line-height: 36px;}

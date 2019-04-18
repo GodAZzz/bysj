@@ -35,7 +35,7 @@ public class PhyTestServiceImpl implements PhyTestService {
         List<PhyTest> allQuestion = phyTestMapper.findAll();
         //总记录数
         int countNums = phyTestMapper.findCountNums();
-        PageBean<PhyTest> phyTestPageBean = new PageBean<>(currentPage, pageSize, countNums);
+        PageBean<PhyTest> phyTestPageBean = new PageBean<PhyTest>(currentPage, pageSize, countNums);
         phyTestPageBean.setItems(allQuestion);
         return phyTestPageBean;
     }
@@ -101,7 +101,7 @@ public class PhyTestServiceImpl implements PhyTestService {
         String result = null;
         Long userid = userMapper.checkAccountExit(loginUser).getUserid();
         List<PhyGrades> allGradesByUser = phyTestMapper.getAllGradesByUser(userid);
-        Map<String,Double> tz = new HashMap<>();
+        Map<String,Double> tz = new HashMap<String,Double>();
         for(PhyGrades phyGrades : allGradesByUser){
             String tzlx = phyGrades.getTzlx();
             if("平和质".equals(tzlx)){
