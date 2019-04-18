@@ -13,105 +13,28 @@
     <!-- <script src="../static/lib/jquery/jquery-3.3.1.min.js"></script>
 <link rel="stylesheet" href="../static/css/phy_base.css"> -->
     <style>
-    .py_text {
-        position: relative;
-    }
-    /*动态添加类*/
-
-    .selected {
-        background: #6fb2e5 !important;
-    }
-
-    .text {
-        color: #f00;
-        margin-top: 20px;
-    }
-
-    .fade {
-        display: none;
-    }
-    /*开始图片*/
-
-    .start {
-        width: 200px;
-        margin: 100px auto;
-    }
-
-    .start img {
-        width: 200px;
-        height: 220px;
-    }
-
-    .start img:hover {
-        transform: translate(0px, 10px);
-        transition: transform .1s linear;
-        box-shadow: 0 0 40px 10px rgba(0, 0, 0, .1);
-    }
-    /*性别选择、选择题*/
-
-    .chosex,
-    .question {
-        margin-top: 114px;
-        text-align: center;
-    }
-
-    .chosex ul,
-    .question ul {
-        width: 400px;
-        margin: 0 auto;
-    }
-
-    .chosex li,
-    .question li {
-        list-style: none;
-        border: 1px solid #a1a1a1;
-        background: #e8e8e8;
-        border-radius: 4px;
-        color: #4c4c4c;
-        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
-        margin: 12px 0;
-        cursor: pointer;
-        color: #4c4c4c;
-    }
-
-    .question {
-        position: relative;
-        /*top: -266px;*/
-    }
-    /*上一题 下一题*/
-
-    .navigator {
-        text-align: center;
-    }
-
-    .pre,
-    .next {
-        float: left;
-    }
-
-    .pre a,
-    .next a {
-        display: block;
-        width: 80px;
-        height: 30px;
-        text-decoration: none;
-        color: #6C6C6C;
-        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
-        border-radius: 4px;
-        line-height: 30px;
-    }
-
-    .pre {
-        background: #6fb2e5;
-        box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
-        margin: 20px 315px 0 150px;
-    }
-
-    .next {
-        background: #77d125;
-        box-shadow: 0 1px 5px #3caa00, inset 0 10px 20px #c9ffb6;
-        margin-top: 20px;
-    }
+.py_text {position: relative;}
+/*动态添加类*/
+.selected {background: #6fb2e5 !important;}
+.text {color: #f00;margin-top: 20px;}
+.fade {display: none;}
+/*开始图片*/
+.start {width: 200px;margin: 100px auto;}
+.start img { width: 200px; height: 220px;}
+.start img:hover {transform: translate(0px, 10px);transition: transform .1s linear;box-shadow: 0 0 40px 10px rgba(0, 0, 0, .1);}
+/*性别选择、选择题*/
+.chosex,.question {margin-top: 114px;text-align: center;}
+.chosex ul,.question ul {width: 400px;margin: 0 auto;}
+.chosex li,
+.question li {list-style: none;border: 1px solid #a1a1a1;background: #e8e8e8;border-radius: 4px;color: #4c4c4c;box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);margin: 12px 0;cursor: pointer;color: #4c4c4c;}
+.question {position: relative;}
+/*上一题 下一题*/
+.navigator {text-align: center;}
+.pre,.next {float: left;}
+.pre a,
+.next a {display: block;width: 80px;height: 30px;text-decoration: none;color: #6C6C6C;text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);border-radius: 4px;line-height: 30px;}
+.pre {background: #6fb2e5;box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;margin: 20px 315px 0 150px;}
+.next { background: #77d125; box-shadow: 0 1px 5px #3caa00, inset 0 10px 20px #c9ffb6; margin-top: 20px;}
     </style>
 </head>
 

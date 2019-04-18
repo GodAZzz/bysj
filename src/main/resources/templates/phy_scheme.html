@@ -12,20 +12,17 @@
 	  <script th:src="@{lib/jquery/jquery-3.3.1.min.js}"></script>
     <style>
         section {height: 920px;}
-
         section>div:not(:first-child) {display: none;}
-
         .clear img { height: 30px; width: 30px;}
-
         .first { text-align: left; line-height: 40px; margin-left: 15px}
-
-        .btn { display: block; width: 150px; height: 50px; margin: 30px auto; color: #fff; background-color: #6B3906; border: none; font-size: 20px; outline: none; font-family: "宋体"; border-radius: 5px}
+        .btn { display: block; width: 150px; height: 50px; margin: 30px auto; background-color: #6B3906; border: none; outline: none; border-radius: 5px}
+        .btn>a{color: #fff; font-size: 18px; }
+        .btn>a:hover{color: rgba(0, 0, 0, .6)}
     </style>
 </head>
 
 <body>
     <!--头部-->
-    <!--<iframe src="header.html" frameborder="0" width="100%" scrolling="no"></iframe>-->
     <div th:include="header::header" ></div>
     <div id="main">
         <ul class="breadcrumb">
@@ -154,7 +151,6 @@ $(".tab li").click(function(){
 
 
         <!--底部-->
-        <!--<iframe src="footer.html" frameborder="0" width="100%" scrolling="no" height="100px;"> </iframe>-->
         <div th:include="footer::footer"></div>
 </body>
 
