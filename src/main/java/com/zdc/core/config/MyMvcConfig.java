@@ -17,7 +17,7 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {
     /*@Override
     public void addInterceptors(InterceptorRegistry registry){
         registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
-                .excludePathPatterns("/userLogin", "/user/login");
+                .excludePathPatterns("/userLogin", "/user/login", "/index", "/register", "/toForgetPwd");
     }*/
 
     @Override
