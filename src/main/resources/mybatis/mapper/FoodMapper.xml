@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zdc.tcms.biz.mapper.FoodMapper">
+
+    <select id="getFourFood" resultType="com.zdc.tcms.biz.entity.RecipesDetails">
+      SELECT * FROM recipse_details  ORDER BY  RAND() LIMIT 4
+    </select>
+    
+    <select id="getByFoodName" resultType="com.zdc.tcms.biz.entity.RecipesDetails">
+        SELECT * FROM recipse_details WHERE foodname=#{foodname}
+    </select>
+</mapper>
