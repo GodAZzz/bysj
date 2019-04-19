@@ -17,4 +17,14 @@ public interface FoodMapper {
      * 根据膳食名字查询
      */
     RecipesDetails getByFoodName(@Param("foodname") String foodname);
+
+    /**
+     * 根据分类查询膳食食谱
+     */
+    List<RecipesDetails> getByFenlei(@Param("fenlei") String fenlei);
+
+    /**
+     * 根据分类查询膳食食谱总数
+     */
+    int getByFenleiCountNums(@Param("fenlei") String fenlei);
 }

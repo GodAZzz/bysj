@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -57,7 +57,7 @@ body{background-color: #fef2e5;}
                 <p class="ardate">2017-11-22 11:10:38 来源：</p>
             </div>
 
-            <img class="img-thumbnail" src="../static/img/article.jpg">
+            <img class="img-thumbnail" th:src="@{/img/article.jpg}">
             <div class="text">
                 <p>
                    <span>小米粥，大家都不会陌生。</span> 

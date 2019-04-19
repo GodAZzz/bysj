@@ -24,6 +24,8 @@ public class PageBean<T> {
     // 是否有下一页
     private Integer isMore;
 
+    private String condtion;
+
     // 分页结果
     private List<T> items;
 
@@ -95,5 +97,13 @@ public class PageBean<T> {
 
     public void setItems(List<T> items) {
         this.items = items;
+    }
+
+    public String getCondtion() {
+        return condtion;
+    }
+
+    public void setCondtion(String condtion) {
+        this.condtion = condtion;
     }
 }

@@ -11,4 +11,12 @@
     <select id="getByFoodName" resultType="com.zdc.tcms.biz.entity.RecipesDetails">
         SELECT * FROM recipse_details WHERE foodname=#{foodname}
     </select>
+    
+    <select id="getByFenlei" parameterType="java.util.Map" resultType="com.zdc.tcms.biz.entity.RecipesDetails">
+      SELECT * FROM recipse_details WHERE fenlei=#{fenlei}
+    </select>
+
+    <select id="getByFenleiCountNums" parameterType="java.util.Map" resultType="java.lang.Integer">
+      SELECT count(1) from recipse_details WHERE fenlei=#{fenlei}
+    </select>
 </mapper>
