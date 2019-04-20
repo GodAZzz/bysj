@@ -138,13 +138,13 @@
             <h3 class="pt-3">体质养生</h3>
             <div class="mt-1 p-4 heath-b">
                 <ul class="list-unstyled list-group">
-                    <li><a href="#">小米粥滋阴补肾还美容 虚寒体质要慎吃</a></li>
-                    <li><a href="#">缓解焦虑症 日常饮食应多吃这些食物</a></li>
+                    <li th:each="article,articleStat : ${articles}"><a th:href="@{/toArticle(topic=${article.topic})}" th:text="${article.topic}"></a></li>
+                    <!--<li><a href="#">缓解焦虑症 日常饮食应多吃这些食物</a></li>
                     <li><a href="#">冠心病患者吃什么好？蛋白质摄取应适量</a></li>
                     <li><a href="#">胃不好吃什么？ 居家健脾胃推荐2款汤水</a></li>
-                    <li><a href="#">每天吃2个猕猴桃 轻松预防心血管疾病</a></li>
+                    <li><a href="#">每天吃2个猕猴桃 轻松预防心血管疾病</a></li>-->
                 </ul>
-                <a href="#" class="more float-right">更多...</a>
+                <!--<a href="#" class="more float-right">更多...</a>-->
             </div>
         </div>
 
