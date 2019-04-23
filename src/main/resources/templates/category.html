@@ -14,7 +14,7 @@
 </head>
 <style>
 a{text-decoration: none;color: #000;}
-#main{width: 1000px;margin: 0 auto;}
+#main{width: 1000px;margin: 0 auto;margin-top: 40px;}
 .list>li {padding-top: 20px; list-style: none;display: flex;justify-content: space-between; width: 100%;border-bottom: 1px solid #999;}
 .list img {width: 180px;height: 133px;}
 .content{width: 750px;}
@@ -22,6 +22,8 @@ a{text-decoration: none;color: #000;}
 .title>a:hover{color: #f19100;}
 .text{overflow: hidden;color: #999;margin-top: 30px; font-size: 14px;}
 
+.showpage{margin-right: 10px; }
+.showpage span{font-size: 16px;line-height: 32px;padding: 0 5px;}
 </style>
 
 <body>
@@ -55,7 +57,7 @@ a{text-decoration: none;color: #000;}
 
         <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-end">
-                    第<span th:text="${recipesDetails.currentPage}"></span>/<span th:text="${recipesDetails.totalPage}">页</span>
+                  <li class="showpage"> <span>第</span> <span th:text="${recipesDetails.currentPage}"></span>/<span th:text="${recipesDetails.totalPage}"></span><span>页</span> </li> 
                   <li class="page-item"><a class="page-link" th:href="@{/toCategory(currentPage=${recipesDetails.currentPage}-1,fenlei=${recipesDetails.condtion})}" onclick="return checkPre()">上一页</a></li>
                   <!--<li class="page-item active"><a class="page-link" href="#">1</a></li>
                   <li class="page-item"><a class="page-link" href="#">2</a></li>

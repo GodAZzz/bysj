@@ -36,7 +36,7 @@ public class FoodServiceImpl implements FoodService{
         List<RecipesDetails> byFenlei = foodMapper.getByFenlei(feilei);
         //根据分类查出来的膳食信息的总记录数
         int byFenleiCountNums = foodMapper.getByFenleiCountNums(feilei);
-        PageBean<RecipesDetails> recipesDetailsPageBean = new PageBean<>(currentPage, pageSize, byFenleiCountNums);
+        PageBean<RecipesDetails> recipesDetailsPageBean = new PageBean<RecipesDetails>(currentPage, pageSize, byFenleiCountNums);
         recipesDetailsPageBean.setItems(byFenlei);
         return recipesDetailsPageBean;
     }

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>文章</title>
     <link rel="stylesheet" th:href="@{/lib/bootstrap/css/bootstrap.css}">
-    <link rel="stylesheet" href="../static/lib/bootstrap/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="../static/lib/bootstrap/css/bootstrap.css"> -->
     <link rel="stylesheet" th:href="@{/css/head_foot.css}">
 </head>
 <style>
@@ -27,9 +27,10 @@ body{background-color: #fef2e5;}
 .artitle{font-size: 20px;}
 .ardate{font-size: 12px;color: #b2b2b2;}
 /* 文章内容 */
-.text{line-height: 35px;}
-.text>p{padding: 20px 100px;font-size: 14px;}
-.text span{display: block;margin: 20px 0;}
+.text>p{line-height: 35px;}
+.text>p{padding: 0px 100px;font-size: 14px;margin-bottom: 0;}
+.text>p:last-child{padding-bottom: 20px; }
+.text>p:first-child{padding-top: 20px;}
 </style>
 
 <body>
@@ -59,19 +60,16 @@ body{background-color: #fef2e5;}
 
             <img class="img-thumbnail" th:src="${article.pictureaddress}">
             <div class="text">
-                <p>
-                   <span th:text="${article.introduce}"></span>
+                        <p th:text="${article.introduce}"></p>
 
+                        <p th:text="${article.p1}"></p>
+                    　　<p th:text="${article.content1}"></p>
 
-                    　<span th:text="${article.p1}"></span>
-                    　　<p th:text="${article.content1}">
-
-                    　<span th:text="${article.p2}"></span>
-                        <p th:text="${article.content2}">
+                        <p th:text="${article.p2}"></p>
+                        <p th:text="${article.content2}"></p>
                 
-                    　　<span th:text="${article.p3}"></span>
-                    　　<p th:text="${article.content3}">
-                </p>
+                    　  <p th:text="${article.p3}"></p>
+                    　　<p th:text="${article.content3}"></p>
             </div>
         </div>
 
